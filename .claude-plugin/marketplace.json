@@ -26,6 +26,16 @@
         "path": "apps/notion",
         "ref": "main"
       }
+    },
+    {
+      "name": "gtm-cheat-codes",
+      "category": "productivity",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/zapier/gtm-cheat-codes.git",
+        "path": ".",
+        "ref": "main"
+      }
     }
   ]
 }

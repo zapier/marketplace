@@ -31,6 +31,20 @@
         "authentication": "ON_INSTALL"
       },
       "category": "Productivity"
+    },
+    {
+      "name": "gtm-cheat-codes",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/zapier/gtm-cheat-codes.git",
+        "path": ".",
+        "ref": "main"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
     }
   ]
 }
