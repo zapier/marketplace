@@ -24,6 +24,13 @@
         "repo": "zapier/connectors",
         "path": "apps/notion"
       }
+    },
+    {
+      "name": "gtm-cheat-codes",
+      "source": {
+        "source": "github",
+        "repo": "zapier/gtm-cheat-codes"
+      }
     }
   ]
 }
