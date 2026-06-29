@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/zapier/marketplace/schemas/copilot-cli.schema.json",
+  "title": "GitHub Copilot CLI marketplace manifest",
+  "description": "Self-authored schema for .github/plugin/marketplace.json. GitHub does not publish a JSON schema URL; this schema is derived from the canonical github/copilot-plugins and github/awesome-copilot marketplaces, and from https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-plugin-reference.",
+  "type": "object",
+  "required": ["name", "owner", "plugins"],
+  "additionalProperties": true,
+  "properties": {
+    "name": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$"
+    },
+    "owner": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "url": { "type": "string", "format": "uri" }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "description": { "type": "string" },
+        "version": { "type": "string" },
+        "pluginRoot": { "type": "string" }
+      }
+    },
+    "plugins": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/plugin" }
+    }
+  },
+  "definitions": {
+    "plugin": {
+      "type": "object",
+      "required": ["name", "source"],
+      "additionalProperties": true,
+      "properties": {
+        "name": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]*$"
+        },
+        "description": { "type": "string" },
+        "version": { "type": "string" },
+        "homepage": { "type": "string", "format": "uri" },
+        "repository": { "type": "string" },
+        "license": { "type": "string" },
+        "keywords": { "type": "array", "items": { "type": "string" } },
+        "author": {
+          "type": "object",
+          "required": ["name"],
+          "properties": {
+            "name": { "type": "string" },
+            "email": { "type": "string", "format": "email" },
+            "url": { "type": "string", "format": "uri" }
+          }
+        },
+        "source": { "$ref": "#/definitions/source" }
+      }
+    },
+    "source": {
+      "oneOf": [
+        { "type": "string", "description": "Local path within this repo" },
+        {
+          "type": "object",
+          "required": ["source"],
+          "properties": {
+            "source": { "enum": ["github"] },
+            "repo": { "type": "string", "pattern": "^[^/]+/[^/]+$" },
+            "path": { "type": "string" },
+            "ref": { "type": "string" }
+          }
+        }
+      ]
+    }
+  }
+}

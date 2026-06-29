@@ -1,0 +1,63 @@
+name: Validate marketplace manifests
+
+on:
+  pull_request:
+    paths:
+      - ".claude-plugin/**"
+      - ".github/plugin/**"
+      - ".agents/plugins/**"
+      - "schemas/**"
+      - ".github/workflows/validate-marketplace.yml"
+      - ".github/scripts/check_consistency.py"
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install validators
+        run: npm install -g ajv-cli ajv-formats
+
+      - name: JSON syntax check
+        run: |
+          for f in .claude-plugin/marketplace.json .github/plugin/marketplace.json .agents/plugins/marketplace.json; do
+            echo "syntax: $f"
+            jq empty "$f"
+          done
+
+      - name: Schema validation
+        run: |
+          ajv validate \
+            --spec=draft7 -c ajv-formats \
+            -s schemas/claude-code.schema.json \
+            -d .claude-plugin/marketplace.json
+          ajv validate \
+            --spec=draft7 -c ajv-formats \
+            -s schemas/copilot-cli.schema.json \
+            -d .github/plugin/marketplace.json
+          ajv validate \
+            --spec=draft7 -c ajv-formats \
+            -s schemas/codex.schema.json \
+            -d .agents/plugins/marketplace.json
+
+      - name: Source URL reachability
+        run: |
+          # Extract every git-style source URL and the equivalent github repo URL,
+          # then verify each one 200s.
+          urls=$(jq -r '
+            .plugins[].source
+            | select(type=="object")
+            | (.url // ("https://github.com/" + .repo))
+            | sub("\\.git$"; "")
+          ' .claude-plugin/marketplace.json .github/plugin/marketplace.json .agents/plugins/marketplace.json \
+            | sort -u)
+          for u in $urls; do
+            echo "reach: $u"
+            curl -fsSL -o /dev/null -I -H "User-Agent: zapier-marketplace-ci" "$u"
+          done
+
+      - name: Cross-manifest consistency
+        run: python3 .github/scripts/check_consistency.py
