@@ -1,0 +1,85 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/zapier/marketplace/schemas/codex.schema.json",
+  "title": "OpenAI Codex marketplace manifest",
+  "description": "Self-authored schema for .agents/plugins/marketplace.json. OpenAI does not publish a JSON schema URL; this schema is derived from the canonical openai/plugins marketplace at https://github.com/openai/plugins and the Codex plugin build docs at https://developers.openai.com/codex/plugins/build.",
+  "type": "object",
+  "required": ["name", "plugins"],
+  "additionalProperties": true,
+  "properties": {
+    "name": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$"
+    },
+    "interface": {
+      "type": "object",
+      "properties": {
+        "displayName": { "type": "string" }
+      }
+    },
+    "plugins": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/plugin" }
+    }
+  },
+  "definitions": {
+    "plugin": {
+      "type": "object",
+      "required": ["name", "source"],
+      "additionalProperties": true,
+      "properties": {
+        "name": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]*$"
+        },
+        "displayName": { "type": "string" },
+        "description": { "type": "string" },
+        "category": { "type": "string" },
+        "source": { "$ref": "#/definitions/source" },
+        "policy": {
+          "type": "object",
+          "properties": {
+            "installation": {
+              "enum": ["AVAILABLE", "INSTALLED_BY_DEFAULT", "NOT_AVAILABLE"]
+            },
+            "authentication": {
+              "enum": ["ON_INSTALL", "ON_USE"]
+            }
+          }
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "required": ["source"],
+      "oneOf": [
+        {
+          "properties": {
+            "source": { "const": "local" },
+            "path": { "type": "string" }
+          },
+          "required": ["path"]
+        },
+        {
+          "properties": {
+            "source": { "const": "url" },
+            "url": { "type": "string", "format": "uri" },
+            "ref": { "type": "string" },
+            "sha": { "type": "string" }
+          },
+          "required": ["url"]
+        },
+        {
+          "properties": {
+            "source": { "const": "git-subdir" },
+            "url": { "type": "string", "format": "uri" },
+            "path": { "type": "string" },
+            "ref": { "type": "string" },
+            "sha": { "type": "string" }
+          },
+          "required": ["url", "path"]
+        }
+      ]
+    }
+  }
+}
