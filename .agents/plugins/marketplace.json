@@ -19,7 +19,7 @@
       "category": "Productivity"
     },
     {
-      "name": "notion",
+      "name": "zapier-notion",
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/zapier/connectors.git",
