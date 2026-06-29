@@ -1,0 +1,22 @@
+{
+  "name": "zapier",
+  "interface": {
+    "displayName": "Zapier"
+  },
+  "plugins": [
+    {
+      "name": "zapier",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/zapier/zapier-mcp.git",
+        "path": "./plugins/zapier",
+        "ref": "main"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

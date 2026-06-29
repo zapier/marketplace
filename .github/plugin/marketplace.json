@@ -1,0 +1,39 @@
+{
+  "name": "zapier",
+  "owner": {
+    "name": "Zapier",
+    "email": "support@zapier.com"
+  },
+  "metadata": {
+    "description": "Official Zapier plugins for GitHub Copilot CLI — connect your AI to 9,000+ apps via the Model Context Protocol",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "zapier",
+      "description": "Connect 9,000+ apps to your AI workflow. Discover, enable, and execute Zapier actions directly from your client.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Zapier",
+        "url": "https://zapier.com"
+      },
+      "homepage": "https://github.com/zapier/zapier-mcp",
+      "keywords": [
+        "zapier",
+        "mcp",
+        "automation",
+        "integrations",
+        "workflow",
+        "ai-actions",
+        "productivity"
+      ],
+      "license": "MIT",
+      "repository": "https://github.com/zapier/zapier-mcp",
+      "source": {
+        "source": "github",
+        "repo": "zapier/zapier-mcp",
+        "path": "plugins/zapier"
+      }
+    }
+  ]
+}
