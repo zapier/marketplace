@@ -22,6 +22,22 @@
         "ref": "main"
       },
       "homepage": "https://github.com/zapier/zapier-mcp"
+    },
+    {
+      "name": "zapier-notion",
+      "description": "Agent-callable Notion tools for searching pages and databases, reading and creating pages, querying data sources, appending content, and managing schemas. Use when the user mentions Notion or wants to find, read, create, or edit Notion content, even if they don't name Notion explicitly.",
+      "author": {
+        "name": "Zapier",
+        "url": "https://zapier.com"
+      },
+      "category": "productivity",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/zapier/connectors.git",
+        "path": "apps/notion",
+        "ref": "main"
+      },
+      "homepage": "https://github.com/zapier/connectors/tree/main/apps/notion"
     }
   ]
 }
