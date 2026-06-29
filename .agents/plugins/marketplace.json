@@ -5,7 +5,7 @@
   },
   "plugins": [
     {
-      "name": "zapier",
+      "name": "mcp",
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/zapier/zapier-mcp.git",
