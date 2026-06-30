@@ -44,7 +44,7 @@
       }
     },
     {
-      "name": "zapier-sdk",
+      "name": "sdk",
       "category": "productivity",
       "source": {
         "source": "github",

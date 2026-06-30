@@ -61,7 +61,7 @@
       "category": "Productivity"
     },
     {
-      "name": "zapier-sdk",
+      "name": "sdk",
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/zapier/sdk.git",

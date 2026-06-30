@@ -40,7 +40,7 @@
       }
     },
     {
-      "name": "zapier-sdk",
+      "name": "sdk",
       "source": {
         "source": "github",
         "repo": "zapier/sdk"
