@@ -38,6 +38,13 @@
         "source": "github",
         "repo": "zapier/agent-skills"
       }
+    },
+    {
+      "name": "zapier-sdk",
+      "source": {
+        "source": "github",
+        "repo": "zapier/sdk"
+      }
     }
   ]
 }
