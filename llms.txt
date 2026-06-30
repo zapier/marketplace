@@ -1,0 +1,30 @@
+# Zapier Marketplace
+
+> The central pointer manifest that lets agents discover and install Zapier plugins across Claude Code, GitHub Copilot CLI, and OpenAI Codex. Plugins themselves live in their home repos; this repo maintains three platform-specific `marketplace.json` files that keep the same plugin set in sync across every supported agent platform.
+
+The repo is small and read-mostly. The four currently listed plugins are `mcp` (the Zapier MCP server), `zapier-notion` (a Notion connector), `gtm-cheat-codes` (go-to-market skills), and `agent-skills` (Zapier-authored Claude Code skills).
+
+## Docs
+
+- [README](https://raw.githubusercontent.com/zapier/marketplace/main/README.md): What the repo is, install commands per platform, naming convention, and how to add a plugin
+- [AGENTS.md](https://raw.githubusercontent.com/zapier/marketplace/main/AGENTS.md): Canonical guide for agents working in this repo — invariants, schemas, naming rules, contribution flow
+- [schemas/README.md](https://raw.githubusercontent.com/zapier/marketplace/main/schemas/README.md): JSON Schemas that validate each manifest, with provenance notes
+
+## Manifests
+
+- [Claude Code manifest](https://raw.githubusercontent.com/zapier/marketplace/main/.claude-plugin/marketplace.json): `.claude-plugin/marketplace.json` — consumed by `/plugin marketplace add zapier/marketplace`
+- [GitHub Copilot CLI manifest](https://raw.githubusercontent.com/zapier/marketplace/main/.github/plugin/marketplace.json): `.github/plugin/marketplace.json` — consumed by `copilot plugin marketplace add zapier/marketplace`
+- [OpenAI Codex manifest](https://raw.githubusercontent.com/zapier/marketplace/main/.agents/plugins/marketplace.json): `.agents/plugins/marketplace.json` — consumed by the Codex plugin marketplace UI
+
+## Plugin home repos
+
+- [zapier/zapier-mcp](https://github.com/zapier/zapier-mcp): Hosted Zapier MCP server — the `mcp` plugin
+- [zapier/connectors](https://github.com/zapier/connectors): App connectors — `zapier-notion` lives at `apps/notion`
+- [zapier/gtm-cheat-codes](https://github.com/zapier/gtm-cheat-codes): Go-to-market skills for marketing, sales, and CS
+- [zapier/agent-skills](https://github.com/zapier/agent-skills): Zapier-authored Claude Code skills
+
+## Optional
+
+- [Claude Code plugin marketplace docs](https://code.claude.com/docs/en/plugin-marketplaces): Platform reference for the Claude Code manifest format
+- [GitHub Copilot CLI plugin marketplace docs](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/plugins-marketplace): Platform reference for the Copilot CLI manifest format
+- [OpenAI Codex plugin docs](https://developers.openai.com/codex/plugins): Platform reference for the Codex manifest format
