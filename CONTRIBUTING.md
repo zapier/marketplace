@@ -18,7 +18,8 @@ For everything else (general questions, support for a specific plugin), open the
 2. **Add the plugin to each manifest whose per-plugin manifest exists in the home repo.** Today that is usually just [`.claude-plugin/marketplace.json`](./.claude-plugin/marketplace.json); Copilot ([`.github/plugin/marketplace.json`](./.github/plugin/marketplace.json)) and Codex ([`.agents/plugins/marketplace.json`](./.agents/plugins/marketplace.json)) are scaffolded but empty until source repos publish their platform manifests. It is fine to land a Claude-only entry — CI only enforces cross-manifest source parity across populated manifests.
 3. **Fill in the optional fields.** `displayName`, `description`, `author`, `homepage`, `repository`, `license`, `category`, and `tags` all render in the marketplace listing before install — populate them so browsing is useful. See `schemas/` for the full field list.
 4. **Pick the right name.** Short, kebab-case product names — `notion`, `slack`, `mcp`, `sdk`. Do **not** prefix with `zapier-`; the `@zapier` marketplace suffix at install time already provides namespacing.
-5. **Open the PR.** The `Validate marketplace manifests` workflow runs JSON syntax, schema validation, source-URL reachability, and the consistency check. Fix anything it flags; merge when green and reviewed.
+5. **Insert alphabetically by `name`.** Every manifest (`.claude-plugin/marketplace.json`, `.github/plugin/marketplace.json`, `.agents/plugins/marketplace.json`) and the plugins table in [`README.md`](./README.md) stay in strict alphabetical order so future adds have an obvious home. Insert your entry in place; don't append.
+6. **Open the PR.** The `Validate marketplace manifests` workflow runs JSON syntax, schema validation, source-URL reachability, and the consistency check. Fix anything it flags; merge when green and reviewed.
 
 ## Removing or renaming a plugin
 

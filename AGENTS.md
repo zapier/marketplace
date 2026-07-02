@@ -25,11 +25,12 @@ CI fails if a plugin listed in two populated manifests drifts. The consistency c
 
 When adding a plugin to a populated platform that isn't yet supported by the others, **it is OK to add it to only that platform**. Filling in Codex / Copilot is a follow-up when the source repos ship the platform-specific manifest.
 
-## Naming rules
+## Naming and ordering
 
 - Plugin names are short, lowercase, kebab-case product names: `notion`, `slack`, `mcp`, `agent-skills`, `gtm-cheat-codes`, `sdk`
 - **Do not prefix with `zapier-`.** The `@zapier` marketplace suffix at install time (`/plugin install notion@zapier`) already provides provenance and namespacing — a `zapier-notion@zapier` install would be redundant and reads as Zapier-branded rather than an open connector for the vendor.
 - Renaming a plugin is a breaking change for every user who has it installed — use the marketplace `renames` field (Claude Code v2.1.193+) to migrate existing installs when a rename is unavoidable.
+- **Keep the plugin list sorted alphabetically by `name`.** Applies to every manifest (`.claude-plugin/marketplace.json`, `.github/plugin/marketplace.json`, `.agents/plugins/marketplace.json`) and to the plugins table in [`README.md`](./README.md). Insert new entries in place; do not append.
 
 ## Schemas and validation
 
@@ -41,14 +42,12 @@ Plugin sources currently pin to `"ref": "main"`. That means every installer pull
 
 ## How to add a plugin
 
-1. Confirm the home repo exposes the right per-platform manifest at the right path (`.claude-plugin/plugin.json` for Claude Code; Codex / Copilot equivalents when those platforms come online).
-2. Add the plugin entry to the marketplace manifest(s) whose per-plugin manifest actually exists in the home repo — today that is `.claude-plugin/marketplace.json`. Leave the empty Codex / Copilot manifests untouched until the home repo ships their per-plugin manifests.
-3. Include the standard optional fields on the entry (`displayName`, `description`, `author`, `homepage`, `repository`, `license`, `tags`) so the marketplace listing carries useful metadata before install. See [`schemas/`](./schemas/) for the full field list.
-4. Open a PR. The `Validate marketplace manifests` workflow runs:
-   - JSON syntax check
-   - Schema validation against the matching file in `schemas/`
-   - Source-URL reachability (the source repo must 200)
-   - Cross-manifest consistency (only enforced across populated manifests)
+For the contributor walkthrough — including the CI checks, review flow, and PR conventions — follow [`CONTRIBUTING.md`](./CONTRIBUTING.md). This section stays short and lists only the invariants those steps must preserve:
+
+1. The home repo must expose the right per-platform manifest at the right path (`.claude-plugin/plugin.json` for Claude Code; Codex / Copilot equivalents when those platforms come online). Empty Codex / Copilot manifests here stay empty until the home repo ships its per-platform manifest.
+2. New entries respect the [naming and ordering rules](#naming-and-ordering) above — kebab-case, no `zapier-` prefix, inserted alphabetically.
+3. Standard optional fields (`displayName`, `description`, `author`, `homepage`, `repository`, `license`, `category`, `tags`) are populated so the marketplace listing renders useful metadata before install.
+4. The same plugin listed in more than one manifest resolves to the same source target — see [manifest invariant](#manifest-invariant-any-plugin-listed-in-two-or-more-platforms-must-resolve-to-the-same-source) above. CI enforces this.
 
 If CI passes and the PR is reviewed, merging makes the plugin installable on the populated platforms.
 
