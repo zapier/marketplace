@@ -14,12 +14,28 @@ Zapier's plugin marketplace for coding agents. One command to add, then install 
 
 ### Claude Code
 
+**In-session** (slash commands inside an active Claude Code session):
+
 ```
 /plugin marketplace add zapier/marketplace
 /plugin install notion@zapier
 ```
 
 Browse the full list interactively with `/plugin` → Discover.
+
+**CLI** (from your terminal, without opening a session):
+
+```
+claude plugin marketplace add zapier/marketplace
+claude plugin install notion@zapier
+claude plugin list
+```
+
+**Invoke the Notion plugin** (example — same pattern works for any installed plugin):
+
+```
+claude "What do our Notion docs say about onboarding new engineers?"
+```
 
 ### GitHub Copilot CLI
 
