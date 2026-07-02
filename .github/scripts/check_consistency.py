@@ -68,17 +68,28 @@ def main() -> int:
         name for plugins in plugins_by_manifest.values() for name in plugins
     }
 
+    # An empty manifest (`plugins: []`) is intentional — a platform we've
+    # scaffolded but not yet populated. Skip it entirely for consistency
+    # purposes. Only manifests that carry at least one plugin participate in
+    # the parity check.
+    populated_manifests = {m for m, plugins in plugins_by_manifest.items() if plugins}
+
     for plugin_name in sorted(plugin_names):
-        targets_by_manifest = {
-            manifest: plugins.get(plugin_name)
-            for manifest, plugins in plugins_by_manifest.items()
-        }
-        missing = [m for m, t in targets_by_manifest.items() if t is None and plugin_name not in plugins_by_manifest[m]]
+        # Only fault a plugin as "missing" from a manifest that is itself
+        # populated — otherwise the empty-manifest platforms would flood errors
+        # for every entry until they're filled in.
+        missing = [
+            m
+            for m in populated_manifests
+            if plugin_name not in plugins_by_manifest.get(m, {})
+        ]
         if missing:
             errors.append(f"plugin '{plugin_name}' missing from: {', '.join(missing)}")
         present_targets = {
-            m: t for m, t in targets_by_manifest.items()
-            if plugin_name in plugins_by_manifest.get(m, {}) and t is not None
+            m: plugins_by_manifest[m][plugin_name]
+            for m in populated_manifests
+            if plugin_name in plugins_by_manifest.get(m, {})
+            and plugins_by_manifest[m][plugin_name] is not None
         }
         unique_targets = set(present_targets.values())
         if len(unique_targets) > 1:

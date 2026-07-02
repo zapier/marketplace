@@ -1,15 +1,26 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "zapier",
-  "description": "Official Zapier plugins for Claude Code — connect your AI to 9,000+ apps via the Model Context Protocol",
+  "description": "Official Zapier plugins for Claude Code — connect agents to 9,000+ apps as MCP servers, agentskills.io skills, or SDK helpers.",
   "owner": {
     "name": "Zapier",
-    "email": "support@zapier.com"
+    "email": "support@zapier.com",
+    "url": "https://zapier.com"
   },
   "plugins": [
     {
       "name": "mcp",
+      "displayName": "Zapier MCP",
+      "description": "Hosted Zapier MCP server — connect any agent to 9,000+ apps.",
       "category": "productivity",
+      "tags": ["mcp", "zapier", "integrations", "automation"],
+      "author": {
+        "name": "Zapier",
+        "email": "support@zapier.com",
+        "url": "https://zapier.com"
+      },
+      "homepage": "https://github.com/zapier/zapier-mcp",
+      "repository": "https://github.com/zapier/zapier-mcp",
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/zapier/zapier-mcp.git",
@@ -18,8 +29,19 @@
       }
     },
     {
-      "name": "zapier-notion",
+      "name": "notion",
+      "displayName": "Notion",
+      "description": "Agent-callable Notion tools for searching pages and databases, reading and creating pages, querying data sources, appending content, and managing schemas. Runs as an MCP server or as an agentskills.io skill.",
       "category": "productivity",
+      "tags": ["notion", "productivity", "database", "docs", "wiki", "pages", "mcp", "skill"],
+      "author": {
+        "name": "Zapier",
+        "email": "support@zapier.com",
+        "url": "https://zapier.com"
+      },
+      "homepage": "https://github.com/zapier/connectors/tree/main/apps/notion",
+      "repository": "https://github.com/zapier/connectors",
+      "license": "Elastic-2.0",
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/zapier/connectors.git",
@@ -29,7 +51,17 @@
     },
     {
       "name": "gtm-cheat-codes",
+      "displayName": "GTM Cheat Codes",
+      "description": "Go-to-market skills for marketing, sales, and customer-success workflows — a curated set of Zapier-authored recipes agents can dispatch on demand.",
       "category": "productivity",
+      "tags": ["gtm", "marketing", "sales", "customer-success", "skills", "workflows"],
+      "author": {
+        "name": "Zapier",
+        "email": "support@zapier.com",
+        "url": "https://zapier.com"
+      },
+      "homepage": "https://github.com/zapier/gtm-cheat-codes",
+      "repository": "https://github.com/zapier/gtm-cheat-codes",
       "source": {
         "source": "github",
         "repo": "zapier/gtm-cheat-codes"
@@ -37,7 +69,17 @@
     },
     {
       "name": "agent-skills",
+      "displayName": "Zapier Agent Skills",
+      "description": "Zapier-authored agentskills.io skills — reusable, agent-callable recipes bundled for Claude Code and compatible clients.",
       "category": "productivity",
+      "tags": ["skills", "agent-skills", "recipes", "zapier"],
+      "author": {
+        "name": "Zapier",
+        "email": "support@zapier.com",
+        "url": "https://zapier.com"
+      },
+      "homepage": "https://github.com/zapier/agent-skills",
+      "repository": "https://github.com/zapier/agent-skills",
       "source": {
         "source": "github",
         "repo": "zapier/agent-skills"
@@ -45,7 +87,17 @@
     },
     {
       "name": "sdk",
-      "category": "productivity",
+      "displayName": "Zapier SDK",
+      "description": "TypeScript SDK for building against Zapier — helpers, types, and skills for integration authors. Not an MCP server.",
+      "category": "developer-tools",
+      "tags": ["sdk", "typescript", "zapier", "developer-tools"],
+      "author": {
+        "name": "Zapier",
+        "email": "support@zapier.com",
+        "url": "https://zapier.com"
+      },
+      "homepage": "https://github.com/zapier/sdk",
+      "repository": "https://github.com/zapier/sdk",
       "source": {
         "source": "github",
         "repo": "zapier/sdk"
