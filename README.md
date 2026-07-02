@@ -1,16 +1,18 @@
 # Zapier Marketplace
 
-Zapier's plugins for Claude Code. One `/plugin marketplace add`, then install any of:
+Zapier's plugin marketplace for coding agents. One command to add, then install any of:
 
 | Plugin | Type | What it does |
 | --- | --- | --- |
 | `mcp` | MCP server | Hosted Zapier MCP — connect any agent to 9,000+ apps |
 | `notion` | MCP + skill | Independent Notion connector — search, read, and write pages |
 | `gtm-cheat-codes` | Skills | Marketing / sales / CS workflow recipes |
-| `agent-skills` | Skills | Zapier-authored skills for Claude Code |
+| `agent-skills` | Skills | Zapier-authored agentskills.io skills for compatible clients |
 | `sdk` | SDK | TypeScript helpers for building against Zapier |
 
 ## Install
+
+### Claude Code
 
 ```
 /plugin marketplace add zapier/marketplace
@@ -19,9 +21,13 @@ Zapier's plugins for Claude Code. One `/plugin marketplace add`, then install an
 
 Browse the full list interactively with `/plugin` → Discover.
 
-## Roadmap
+### GitHub Copilot CLI
 
-GitHub Copilot CLI and OpenAI Codex marketplaces are scaffolded in this repo but intentionally unpopulated — installing on those platforms requires per-plugin manifests (`.codex-plugin/plugin.json`, Copilot equivalent) that most home repos don't yet ship. We'll fill them in once the source repos publish those manifests.
+Coming soon.
+
+### OpenAI Codex
+
+Coming soon.
 
 ## Contributing
 
