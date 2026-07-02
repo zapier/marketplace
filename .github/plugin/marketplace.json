@@ -5,46 +5,8 @@
     "email": "support@zapier.com"
   },
   "metadata": {
-    "description": "Official Zapier plugins for GitHub Copilot CLI — connect your AI to 9,000+ apps via the Model Context Protocol",
+    "description": "Official Zapier plugins for GitHub Copilot CLI — roadmap: not yet populated. Track progress at https://github.com/zapier/marketplace/issues.",
     "version": "1.0.0"
   },
-  "plugins": [
-    {
-      "name": "mcp",
-      "source": {
-        "source": "github",
-        "repo": "zapier/zapier-mcp",
-        "path": "plugins/zapier"
-      }
-    },
-    {
-      "name": "zapier-notion",
-      "source": {
-        "source": "github",
-        "repo": "zapier/connectors",
-        "path": "apps/notion"
-      }
-    },
-    {
-      "name": "gtm-cheat-codes",
-      "source": {
-        "source": "github",
-        "repo": "zapier/gtm-cheat-codes"
-      }
-    },
-    {
-      "name": "agent-skills",
-      "source": {
-        "source": "github",
-        "repo": "zapier/agent-skills"
-      }
-    },
-    {
-      "name": "sdk",
-      "source": {
-        "source": "github",
-        "repo": "zapier/sdk"
-      }
-    }
-  ]
+  "plugins": []
 }

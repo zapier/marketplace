@@ -9,27 +9,23 @@ For everything else (general questions, support for a specific plugin), open the
 
 ## Before you start
 
-- Read [AGENTS.md](./AGENTS.md). It's short, and it covers the hard invariant (three manifests must stay in sync), the naming convention (`zapier-<product>` for third-party connectors, short names for first-party), and the CI that enforces all of it.
+- Read [AGENTS.md](./AGENTS.md). It's short, and it covers the manifest invariant (plugins listed in two or more platforms must resolve to the same source), the naming convention (short, kebab-case product names — no `zapier-` prefix), and the CI that enforces all of it.
 - Skim [`schemas/README.md`](./schemas/README.md) so you know which JSON Schema your changes will be validated against.
 
 ## Adding a plugin
 
-1. **Confirm the home repo is ready.** Each platform's marketplace consumes a different per-plugin manifest from the source repo — `.claude-plugin/plugin.json` for Claude Code, the equivalent for Copilot CLI, and `.codex-plugin/plugin.json` for Codex. The plugin won't install if those aren't published in the home repo.
-2. **Edit all three manifests** in the same PR:
-   - [`.claude-plugin/marketplace.json`](./.claude-plugin/marketplace.json)
-   - [`.github/plugin/marketplace.json`](./.github/plugin/marketplace.json)
-   - [`.agents/plugins/marketplace.json`](./.agents/plugins/marketplace.json)
-
-   Same `name`, same source target (repo, path, ref). CI's cross-manifest consistency check fails if any of those drift.
-3. **Pick the right name.** Third-party connectors use `zapier-<product>` (e.g. `zapier-notion`). First-party Zapier products use a short name (`mcp`, `agent-skills`).
-4. **Open the PR.** The `Validate marketplace manifests` workflow runs JSON syntax, schema validation, source-URL reachability, and the consistency check. Fix anything it flags; merge when green and reviewed.
+1. **Confirm the home repo is ready.** Each platform's marketplace consumes a different per-plugin manifest from the source repo — `.claude-plugin/plugin.json` for Claude Code, the equivalent for Copilot CLI, and `.codex-plugin/plugin.json` for Codex. The plugin won't install on a given platform if that platform's manifest isn't published in the home repo.
+2. **Add the plugin to each manifest whose per-plugin manifest exists in the home repo.** Today that is usually just [`.claude-plugin/marketplace.json`](./.claude-plugin/marketplace.json); Copilot ([`.github/plugin/marketplace.json`](./.github/plugin/marketplace.json)) and Codex ([`.agents/plugins/marketplace.json`](./.agents/plugins/marketplace.json)) are scaffolded but empty until source repos publish their platform manifests. It is fine to land a Claude-only entry — CI only enforces cross-manifest source parity across populated manifests.
+3. **Fill in the optional fields.** `displayName`, `description`, `author`, `homepage`, `repository`, `license`, `category`, and `tags` all render in the marketplace listing before install — populate them so browsing is useful. See `schemas/` for the full field list.
+4. **Pick the right name.** Short, kebab-case product names — `notion`, `slack`, `mcp`, `sdk`. Do **not** prefix with `zapier-`; the `@zapier` marketplace suffix at install time already provides namespacing.
+5. **Open the PR.** The `Validate marketplace manifests` workflow runs JSON syntax, schema validation, source-URL reachability, and the consistency check. Fix anything it flags; merge when green and reviewed.
 
 ## Removing or renaming a plugin
 
 Both are user-visible breaking changes — anyone with the plugin installed will see it disappear or fail to update. Don't do either silently:
 
 - **Remove:** open a PR explaining why, and call it out in the PR description so reviewers can flag it for users.
-- **Rename:** prefer adding the new entry first, leaving the old one in place for a grace period, then removing the old one in a follow-up PR.
+- **Rename:** use the marketplace-level [`renames`](https://code.claude.com/docs/en/plugin-marketplaces) map (Claude Code v2.1.193+) to migrate existing installs automatically. Add the new entry, add the old → new (or old → `null`) mapping in `renames`, and remove the old entry in the same PR.
 
 ## Updating a schema
 
@@ -47,7 +43,7 @@ Every PR runs [`.github/workflows/validate-marketplace.yml`](./.github/workflows
 1. JSON syntax (`jq empty`) on each manifest
 2. Schema validation (`ajv`) against the matching file in `schemas/`
 3. Source-URL reachability — every linked source repo must 200
-4. Cross-manifest consistency — same plugin name, same source target across all three files
+4. Cross-manifest consistency — for any plugin listed in more than one populated manifest, the source target must match. Empty manifests (`plugins: []`) skip the check.
 
 If any step fails, the PR isn't mergeable. Look at the failed step's output first — the errors are designed to point at the specific manifest and entry that's off.
 

@@ -6,28 +6,30 @@ Canonical guide for AI agents (and humans) working in `zapier/marketplace`. `CLA
 
 This repo is the central pointer manifest that lets agents discover Zapier plugins across Claude Code, GitHub Copilot CLI, and OpenAI Codex. It does **not** host plugin source — every plugin lives in its own home repo. This repo only maintains the marketplace entries that point at those repos.
 
-## Hard invariant: keep the three manifests in lockstep
+## Manifest invariant: any plugin listed in two or more platforms must resolve to the same source
 
 There are three manifest files, one per platform:
 
-- [`.claude-plugin/marketplace.json`](./.claude-plugin/marketplace.json) — Claude Code
-- [`.github/plugin/marketplace.json`](./.github/plugin/marketplace.json) — GitHub Copilot CLI
-- [`.agents/plugins/marketplace.json`](./.agents/plugins/marketplace.json) — OpenAI Codex
+- [`.claude-plugin/marketplace.json`](./.claude-plugin/marketplace.json) — Claude Code (populated)
+- [`.github/plugin/marketplace.json`](./.github/plugin/marketplace.json) — GitHub Copilot CLI (scaffolded, empty)
+- [`.agents/plugins/marketplace.json`](./.agents/plugins/marketplace.json) — OpenAI Codex (scaffolded, empty)
 
-For every plugin, all three manifests must:
+For every plugin that appears in more than one manifest, all copies must:
 
-1. List the same plugin name
+1. Use the same plugin name
 2. Resolve to the same source target (same repo, same `path`, same `ref`)
 
-CI fails if these drift. The consistency check lives at [`.github/scripts/check_consistency.py`](./.github/scripts/check_consistency.py).
+An **empty manifest** (`plugins: []`) is intentional — a platform we've scaffolded but not yet populated because the per-plugin manifests it needs (`.codex-plugin/plugin.json`, Copilot equivalent) don't yet exist in the home repos. Empty manifests skip the consistency check entirely.
 
-When adding, removing, or moving a plugin, **edit all three files in the same PR**. There is no "Claude-only" or "Codex-only" plugin in this repo.
+CI fails if a plugin listed in two populated manifests drifts. The consistency check lives at [`.github/scripts/check_consistency.py`](./.github/scripts/check_consistency.py).
+
+When adding a plugin to a populated platform that isn't yet supported by the others, **it is OK to add it to only that platform**. Filling in Codex / Copilot is a follow-up when the source repos ship the platform-specific manifest.
 
 ## Naming rules
 
-- First-party Zapier products use short names: `mcp`, `agent-skills`, `gtm-cheat-codes`
-- Connectors that wrap a third-party product use `zapier-<product>`: `zapier-notion`, not `notion`. This makes provenance explicit and avoids claiming a namespace the upstream vendor would own
-- Plugin names are lowercase, kebab-case, and stable — renaming a plugin is a breaking change for every user who has it installed
+- Plugin names are short, lowercase, kebab-case product names: `notion`, `slack`, `mcp`, `agent-skills`, `gtm-cheat-codes`, `sdk`
+- **Do not prefix with `zapier-`.** The `@zapier` marketplace suffix at install time (`/plugin install notion@zapier`) already provides provenance and namespacing — a `zapier-notion@zapier` install would be redundant and reads as Zapier-branded rather than an open connector for the vendor.
+- Renaming a plugin is a breaking change for every user who has it installed — use the marketplace `renames` field (Claude Code v2.1.193+) to migrate existing installs when a rename is unavoidable.
 
 ## Schemas and validation
 
@@ -39,15 +41,16 @@ Plugin sources currently pin to `"ref": "main"`. That means every installer pull
 
 ## How to add a plugin
 
-1. Confirm the home repo exposes the right per-platform manifest at the right path (`.claude-plugin/plugin.json` for Claude Code, equivalents for Copilot CLI and Codex)
-2. Add one entry per plugin to **all three** marketplace manifests in this repo
-3. Open a PR. The `Validate marketplace manifests` workflow runs:
+1. Confirm the home repo exposes the right per-platform manifest at the right path (`.claude-plugin/plugin.json` for Claude Code; Codex / Copilot equivalents when those platforms come online).
+2. Add the plugin entry to the marketplace manifest(s) whose per-plugin manifest actually exists in the home repo — today that is `.claude-plugin/marketplace.json`. Leave the empty Codex / Copilot manifests untouched until the home repo ships their per-plugin manifests.
+3. Include the standard optional fields on the entry (`displayName`, `description`, `author`, `homepage`, `repository`, `license`, `tags`) so the marketplace listing carries useful metadata before install. See [`schemas/`](./schemas/) for the full field list.
+4. Open a PR. The `Validate marketplace manifests` workflow runs:
    - JSON syntax check
    - Schema validation against the matching file in `schemas/`
    - Source-URL reachability (the source repo must 200)
-   - Cross-manifest consistency
+   - Cross-manifest consistency (only enforced across populated manifests)
 
-If CI passes and the PR is reviewed, merging makes the plugin installable everywhere at once.
+If CI passes and the PR is reviewed, merging makes the plugin installable on the populated platforms.
 
 ## What does **not** belong in this repo
 
