@@ -5,7 +5,20 @@ Zapier's plugin marketplace for coding agents. One command to add, then install 
 | Plugin | Type | What it does |
 | --- | --- | --- |
 | `mcp` | MCP server | Hosted Zapier MCP — connect any agent to 9,000+ apps |
+| `dropbox` | MCP + skill | Dropbox files and folders — upload, share, search, and organize |
+| `google-ads` | MCP + skill | Google Ads campaigns, budgets, and reporting |
+| `google-calendar` | MCP + skill | Events, calendars, and free/busy availability |
+| `google-contacts` | MCP + skill | Contacts and contact groups (labels) |
+| `google-docs` | MCP + skill | Create, read, and edit Google Docs |
+| `google-sheets` | MCP + skill | Read and write Google Sheets data, formatting, and structure |
+| `google-tasks` | MCP + skill | Task lists and to-dos in Google Tasks |
+| `microsoft-outlook` | MCP + skill | Outlook mail, calendar, and contacts |
 | `notion` | MCP + skill | Independent Notion connector — search, read, and write pages |
+| `pipedrive` | MCP + skill | Pipedrive CRM — deals, contacts, and activities |
+| `slack` | MCP + skill | Slack messages, channels, threads, and canvases |
+| `telegram` | MCP + skill | Telegram bot — messages, media, and chats |
+| `trello` | MCP + skill | Trello boards, lists, and cards |
+| `youtube` | MCP + skill | YouTube videos, playlists, and comments |
 | `gtm-cheat-codes` | Skills | Marketing / sales / CS workflow recipes |
 | `agent-skills` | Skills | Zapier-authored agentskills.io skills for compatible clients |
 | `sdk` | SDK | TypeScript helpers for building against Zapier |

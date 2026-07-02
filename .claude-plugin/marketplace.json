@@ -29,6 +29,174 @@
       }
     },
     {
+      "name": "dropbox",
+      "displayName": "Dropbox",
+      "description": "Agent-callable Dropbox tools — upload, organize, find, and share files and folders. Runs as an MCP server or as an agentskills.io skill.",
+      "category": "productivity",
+      "tags": ["dropbox", "files", "cloud-storage", "file-sharing", "mcp", "skill"],
+      "author": {
+        "name": "Zapier",
+        "email": "support@zapier.com",
+        "url": "https://zapier.com"
+      },
+      "homepage": "https://github.com/zapier/connectors/tree/main/apps/dropbox",
+      "repository": "https://github.com/zapier/connectors",
+      "license": "Elastic-2.0",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/zapier/connectors.git",
+        "path": "apps/dropbox",
+        "ref": "main"
+      }
+    },
+    {
+      "name": "google-ads",
+      "displayName": "Google Ads",
+      "description": "Agent-callable Google Ads tools — search campaigns, ad groups, and ads via GAQL, build performance reports, manage campaign status and budgets, and set up conversion tracking. Runs as an MCP server or as an agentskills.io skill.",
+      "category": "marketing",
+      "tags": ["google-ads", "advertising", "marketing", "campaigns", "reporting", "mcp", "skill"],
+      "author": {
+        "name": "Zapier",
+        "email": "support@zapier.com",
+        "url": "https://zapier.com"
+      },
+      "homepage": "https://github.com/zapier/connectors/tree/main/apps/google-ads",
+      "repository": "https://github.com/zapier/connectors",
+      "license": "Elastic-2.0",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/zapier/connectors.git",
+        "path": "apps/google-ads",
+        "ref": "main"
+      }
+    },
+    {
+      "name": "google-calendar",
+      "displayName": "Google Calendar",
+      "description": "Agent-callable Google Calendar tools — create, update, move, search, and delete events, manage calendars, check free/busy availability, resolve event colors, and manage calendar sharing. Runs as an MCP server or as an agentskills.io skill.",
+      "category": "productivity",
+      "tags": ["google-calendar", "calendar", "events", "scheduling", "meetings", "availability", "mcp", "skill"],
+      "author": {
+        "name": "Zapier",
+        "email": "support@zapier.com",
+        "url": "https://zapier.com"
+      },
+      "homepage": "https://github.com/zapier/connectors/tree/main/apps/google-calendar",
+      "repository": "https://github.com/zapier/connectors",
+      "license": "Elastic-2.0",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/zapier/connectors.git",
+        "path": "apps/google-calendar",
+        "ref": "main"
+      }
+    },
+    {
+      "name": "google-contacts",
+      "displayName": "Google Contacts",
+      "description": "Agent-callable Google Contacts tools — create, find, update, and delete contacts, manage contact groups (labels) and membership, and read auto-saved other contacts. Runs as an MCP server or as an agentskills.io skill.",
+      "category": "productivity",
+      "tags": ["google-contacts", "contacts", "address-book", "people", "mcp", "skill"],
+      "author": {
+        "name": "Zapier",
+        "email": "support@zapier.com",
+        "url": "https://zapier.com"
+      },
+      "homepage": "https://github.com/zapier/connectors/tree/main/apps/google-contacts",
+      "repository": "https://github.com/zapier/connectors",
+      "license": "Elastic-2.0",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/zapier/connectors.git",
+        "path": "apps/google-contacts",
+        "ref": "main"
+      }
+    },
+    {
+      "name": "google-docs",
+      "displayName": "Google Docs",
+      "description": "Agent-callable Google Docs tools — create, read, export, and find documents; edit text, formatting, images, and page style. Runs as an MCP server or as an agentskills.io skill.",
+      "category": "productivity",
+      "tags": ["google-docs", "documents", "docs", "word-processing", "google-workspace", "mcp", "skill"],
+      "author": {
+        "name": "Zapier",
+        "email": "support@zapier.com",
+        "url": "https://zapier.com"
+      },
+      "homepage": "https://github.com/zapier/connectors/tree/main/apps/google-docs",
+      "repository": "https://github.com/zapier/connectors",
+      "license": "Elastic-2.0",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/zapier/connectors.git",
+        "path": "apps/google-docs",
+        "ref": "main"
+      }
+    },
+    {
+      "name": "google-sheets",
+      "displayName": "Google Sheets",
+      "description": "Agent-callable Google Sheets tools — read and write spreadsheet data as rows or raw cells, manage worksheets and columns, and apply formatting, sorting, and validation. Runs as an MCP server or as an agentskills.io skill.",
+      "category": "productivity",
+      "tags": ["google-sheets", "spreadsheets", "sheets", "data", "google-workspace", "mcp", "skill"],
+      "author": {
+        "name": "Zapier",
+        "email": "support@zapier.com",
+        "url": "https://zapier.com"
+      },
+      "homepage": "https://github.com/zapier/connectors/tree/main/apps/google-sheets",
+      "repository": "https://github.com/zapier/connectors",
+      "license": "Elastic-2.0",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/zapier/connectors.git",
+        "path": "apps/google-sheets",
+        "ref": "main"
+      }
+    },
+    {
+      "name": "google-tasks",
+      "displayName": "Google Tasks",
+      "description": "Agent-callable Google Tasks tools — create, list, update, complete, move, and delete tasks and task lists. Runs as an MCP server or as an agentskills.io skill.",
+      "category": "productivity",
+      "tags": ["google-tasks", "tasks", "todo", "task-management", "mcp", "skill"],
+      "author": {
+        "name": "Zapier",
+        "email": "support@zapier.com",
+        "url": "https://zapier.com"
+      },
+      "homepage": "https://github.com/zapier/connectors/tree/main/apps/google-tasks",
+      "repository": "https://github.com/zapier/connectors",
+      "license": "Elastic-2.0",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/zapier/connectors.git",
+        "path": "apps/google-tasks",
+        "ref": "main"
+      }
+    },
+    {
+      "name": "microsoft-outlook",
+      "displayName": "Microsoft Outlook",
+      "description": "Agent-callable Microsoft Outlook tools — read and search mail, send/reply/forward, organize messages and folders, manage calendar events, and manage contacts. Runs as an MCP server or as an agentskills.io skill.",
+      "category": "productivity",
+      "tags": ["microsoft-outlook", "outlook", "email", "calendar", "contacts", "microsoft-365", "mcp", "skill"],
+      "author": {
+        "name": "Zapier",
+        "email": "support@zapier.com",
+        "url": "https://zapier.com"
+      },
+      "homepage": "https://github.com/zapier/connectors/tree/main/apps/microsoft-outlook",
+      "repository": "https://github.com/zapier/connectors",
+      "license": "Elastic-2.0",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/zapier/connectors.git",
+        "path": "apps/microsoft-outlook",
+        "ref": "main"
+      }
+    },
+    {
       "name": "notion",
       "displayName": "Notion",
       "description": "Agent-callable Notion tools for searching pages and databases, reading and creating pages, querying data sources, appending content, and managing schemas. Runs as an MCP server or as an agentskills.io skill.",
@@ -46,6 +214,111 @@
         "source": "git-subdir",
         "url": "https://github.com/zapier/connectors.git",
         "path": "apps/notion",
+        "ref": "main"
+      }
+    },
+    {
+      "name": "pipedrive",
+      "displayName": "Pipedrive",
+      "description": "Manage a Pipedrive CRM — create, update, find, and delete deals, persons, organizations, activities, leads, products, and notes. Runs as an MCP server or as an agentskills.io skill.",
+      "category": "sales",
+      "tags": ["pipedrive", "crm", "sales", "deals", "leads", "mcp", "skill"],
+      "author": {
+        "name": "Zapier",
+        "email": "support@zapier.com",
+        "url": "https://zapier.com"
+      },
+      "homepage": "https://github.com/zapier/connectors/tree/main/apps/pipedrive",
+      "repository": "https://github.com/zapier/connectors",
+      "license": "Elastic-2.0",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/zapier/connectors.git",
+        "path": "apps/pipedrive",
+        "ref": "main"
+      }
+    },
+    {
+      "name": "slack",
+      "displayName": "Slack",
+      "description": "Agent-callable Slack tools — send and manage messages, read channels and threads, search, manage channels and membership, look up users, and work with canvases and files. Runs as an MCP server or as an agentskills.io skill.",
+      "category": "communication",
+      "tags": ["slack", "messaging", "chat", "channels", "canvas", "mcp", "skill"],
+      "author": {
+        "name": "Zapier",
+        "email": "support@zapier.com",
+        "url": "https://zapier.com"
+      },
+      "homepage": "https://github.com/zapier/connectors/tree/main/apps/slack",
+      "repository": "https://github.com/zapier/connectors",
+      "license": "Elastic-2.0",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/zapier/connectors.git",
+        "path": "apps/slack",
+        "ref": "main"
+      }
+    },
+    {
+      "name": "telegram",
+      "displayName": "Telegram",
+      "description": "Agent-callable Telegram bot tools — send messages, media, locations, contacts, and polls; edit, delete, forward, copy, and pin messages; resolve chats, members, and files. Runs as an MCP server or as an agentskills.io skill.",
+      "category": "communication",
+      "tags": ["telegram", "messaging", "chat", "bot", "mcp", "skill"],
+      "author": {
+        "name": "Zapier",
+        "email": "support@zapier.com",
+        "url": "https://zapier.com"
+      },
+      "homepage": "https://github.com/zapier/connectors/tree/main/apps/telegram",
+      "repository": "https://github.com/zapier/connectors",
+      "license": "Elastic-2.0",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/zapier/connectors.git",
+        "path": "apps/telegram",
+        "ref": "main"
+      }
+    },
+    {
+      "name": "trello",
+      "displayName": "Trello",
+      "description": "Agent-callable Trello tools — create and update cards, manage boards, lists, labels, checklists, and search. Runs as an MCP server or as an agentskills.io skill.",
+      "category": "productivity",
+      "tags": ["trello", "boards", "cards", "task-management", "project-management", "mcp", "skill"],
+      "author": {
+        "name": "Zapier",
+        "email": "support@zapier.com",
+        "url": "https://zapier.com"
+      },
+      "homepage": "https://github.com/zapier/connectors/tree/main/apps/trello",
+      "repository": "https://github.com/zapier/connectors",
+      "license": "Elastic-2.0",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/zapier/connectors.git",
+        "path": "apps/trello",
+        "ref": "main"
+      }
+    },
+    {
+      "name": "youtube",
+      "displayName": "YouTube",
+      "description": "Agent-callable YouTube tools — search and read videos, update and delete videos, manage playlists and playlist items, read and post comments, rate videos, manage subscriptions, and read channel and caption metadata. Runs as an MCP server or as an agentskills.io skill.",
+      "category": "media",
+      "tags": ["youtube", "video", "playlists", "comments", "channels", "mcp", "skill"],
+      "author": {
+        "name": "Zapier",
+        "email": "support@zapier.com",
+        "url": "https://zapier.com"
+      },
+      "homepage": "https://github.com/zapier/connectors/tree/main/apps/youtube",
+      "repository": "https://github.com/zapier/connectors",
+      "license": "Elastic-2.0",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/zapier/connectors.git",
+        "path": "apps/youtube",
         "ref": "main"
       }
     },
