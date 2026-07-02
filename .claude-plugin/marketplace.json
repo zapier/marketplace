@@ -9,23 +9,26 @@
   },
   "plugins": [
     {
-      "name": "mcp",
-      "displayName": "Zapier MCP",
-      "description": "Hosted Zapier MCP server — connect any agent to 9,000+ apps.",
+      "name": "agent-skills",
+      "displayName": "Zapier Agent Skills",
+      "description": "Zapier-authored agentskills.io skills — reusable, agent-callable recipes bundled for Claude Code and compatible clients.",
       "category": "productivity",
-      "tags": ["mcp", "zapier", "integrations", "automation"],
+      "tags": [
+        "skills",
+        "agent-skills",
+        "recipes",
+        "zapier"
+      ],
       "author": {
         "name": "Zapier",
         "email": "support@zapier.com",
         "url": "https://zapier.com"
       },
-      "homepage": "https://github.com/zapier/zapier-mcp",
-      "repository": "https://github.com/zapier/zapier-mcp",
+      "homepage": "https://github.com/zapier/agent-skills",
+      "repository": "https://github.com/zapier/agent-skills",
       "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/zapier/zapier-mcp.git",
-        "path": "plugins/zapier",
-        "ref": "main"
+        "source": "github",
+        "repo": "zapier/agent-skills"
       }
     },
     {
@@ -33,7 +36,14 @@
       "displayName": "Dropbox",
       "description": "Agent-callable Dropbox tools — upload, organize, find, and share files and folders. Runs as an MCP server or as an agentskills.io skill.",
       "category": "productivity",
-      "tags": ["dropbox", "files", "cloud-storage", "file-sharing", "mcp", "skill"],
+      "tags": [
+        "dropbox",
+        "files",
+        "cloud-storage",
+        "file-sharing",
+        "mcp",
+        "skill"
+      ],
       "author": {
         "name": "Zapier",
         "email": "support@zapier.com",
@@ -54,7 +64,15 @@
       "displayName": "Google Ads",
       "description": "Agent-callable Google Ads tools — search campaigns, ad groups, and ads via GAQL, build performance reports, manage campaign status and budgets, and set up conversion tracking. Runs as an MCP server or as an agentskills.io skill.",
       "category": "marketing",
-      "tags": ["google-ads", "advertising", "marketing", "campaigns", "reporting", "mcp", "skill"],
+      "tags": [
+        "google-ads",
+        "advertising",
+        "marketing",
+        "campaigns",
+        "reporting",
+        "mcp",
+        "skill"
+      ],
       "author": {
         "name": "Zapier",
         "email": "support@zapier.com",
@@ -75,7 +93,16 @@
       "displayName": "Google Calendar",
       "description": "Agent-callable Google Calendar tools — create, update, move, search, and delete events, manage calendars, check free/busy availability, resolve event colors, and manage calendar sharing. Runs as an MCP server or as an agentskills.io skill.",
       "category": "productivity",
-      "tags": ["google-calendar", "calendar", "events", "scheduling", "meetings", "availability", "mcp", "skill"],
+      "tags": [
+        "google-calendar",
+        "calendar",
+        "events",
+        "scheduling",
+        "meetings",
+        "availability",
+        "mcp",
+        "skill"
+      ],
       "author": {
         "name": "Zapier",
         "email": "support@zapier.com",
@@ -96,7 +123,14 @@
       "displayName": "Google Contacts",
       "description": "Agent-callable Google Contacts tools — create, find, update, and delete contacts, manage contact groups (labels) and membership, and read auto-saved other contacts. Runs as an MCP server or as an agentskills.io skill.",
       "category": "productivity",
-      "tags": ["google-contacts", "contacts", "address-book", "people", "mcp", "skill"],
+      "tags": [
+        "google-contacts",
+        "contacts",
+        "address-book",
+        "people",
+        "mcp",
+        "skill"
+      ],
       "author": {
         "name": "Zapier",
         "email": "support@zapier.com",
@@ -117,7 +151,15 @@
       "displayName": "Google Docs",
       "description": "Agent-callable Google Docs tools — create, read, export, and find documents; edit text, formatting, images, and page style. Runs as an MCP server or as an agentskills.io skill.",
       "category": "productivity",
-      "tags": ["google-docs", "documents", "docs", "word-processing", "google-workspace", "mcp", "skill"],
+      "tags": [
+        "google-docs",
+        "documents",
+        "docs",
+        "word-processing",
+        "google-workspace",
+        "mcp",
+        "skill"
+      ],
       "author": {
         "name": "Zapier",
         "email": "support@zapier.com",
@@ -138,7 +180,15 @@
       "displayName": "Google Sheets",
       "description": "Agent-callable Google Sheets tools — read and write spreadsheet data as rows or raw cells, manage worksheets and columns, and apply formatting, sorting, and validation. Runs as an MCP server or as an agentskills.io skill.",
       "category": "productivity",
-      "tags": ["google-sheets", "spreadsheets", "sheets", "data", "google-workspace", "mcp", "skill"],
+      "tags": [
+        "google-sheets",
+        "spreadsheets",
+        "sheets",
+        "data",
+        "google-workspace",
+        "mcp",
+        "skill"
+      ],
       "author": {
         "name": "Zapier",
         "email": "support@zapier.com",
@@ -159,7 +209,14 @@
       "displayName": "Google Tasks",
       "description": "Agent-callable Google Tasks tools — create, list, update, complete, move, and delete tasks and task lists. Runs as an MCP server or as an agentskills.io skill.",
       "category": "productivity",
-      "tags": ["google-tasks", "tasks", "todo", "task-management", "mcp", "skill"],
+      "tags": [
+        "google-tasks",
+        "tasks",
+        "todo",
+        "task-management",
+        "mcp",
+        "skill"
+      ],
       "author": {
         "name": "Zapier",
         "email": "support@zapier.com",
@@ -176,11 +233,70 @@
       }
     },
     {
+      "name": "gtm-cheat-codes",
+      "displayName": "GTM Cheat Codes",
+      "description": "Go-to-market skills for marketing, sales, and customer-success workflows — a curated set of Zapier-authored recipes agents can dispatch on demand.",
+      "category": "productivity",
+      "tags": [
+        "gtm",
+        "marketing",
+        "sales",
+        "customer-success",
+        "skills",
+        "workflows"
+      ],
+      "author": {
+        "name": "Zapier",
+        "email": "support@zapier.com",
+        "url": "https://zapier.com"
+      },
+      "homepage": "https://github.com/zapier/gtm-cheat-codes",
+      "repository": "https://github.com/zapier/gtm-cheat-codes",
+      "source": {
+        "source": "github",
+        "repo": "zapier/gtm-cheat-codes"
+      }
+    },
+    {
+      "name": "mcp",
+      "displayName": "Zapier MCP",
+      "description": "Hosted Zapier MCP server — connect any agent to 9,000+ apps.",
+      "category": "productivity",
+      "tags": [
+        "mcp",
+        "zapier",
+        "integrations",
+        "automation"
+      ],
+      "author": {
+        "name": "Zapier",
+        "email": "support@zapier.com",
+        "url": "https://zapier.com"
+      },
+      "homepage": "https://github.com/zapier/zapier-mcp",
+      "repository": "https://github.com/zapier/zapier-mcp",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/zapier/zapier-mcp.git",
+        "path": "plugins/zapier",
+        "ref": "main"
+      }
+    },
+    {
       "name": "microsoft-outlook",
       "displayName": "Microsoft Outlook",
       "description": "Agent-callable Microsoft Outlook tools — read and search mail, send/reply/forward, organize messages and folders, manage calendar events, and manage contacts. Runs as an MCP server or as an agentskills.io skill.",
       "category": "productivity",
-      "tags": ["microsoft-outlook", "outlook", "email", "calendar", "contacts", "microsoft-365", "mcp", "skill"],
+      "tags": [
+        "microsoft-outlook",
+        "outlook",
+        "email",
+        "calendar",
+        "contacts",
+        "microsoft-365",
+        "mcp",
+        "skill"
+      ],
       "author": {
         "name": "Zapier",
         "email": "support@zapier.com",
@@ -201,7 +317,16 @@
       "displayName": "Notion",
       "description": "Agent-callable Notion tools for searching pages and databases, reading and creating pages, querying data sources, appending content, and managing schemas. Runs as an MCP server or as an agentskills.io skill.",
       "category": "productivity",
-      "tags": ["notion", "productivity", "database", "docs", "wiki", "pages", "mcp", "skill"],
+      "tags": [
+        "notion",
+        "productivity",
+        "database",
+        "docs",
+        "wiki",
+        "pages",
+        "mcp",
+        "skill"
+      ],
       "author": {
         "name": "Zapier",
         "email": "support@zapier.com",
@@ -222,7 +347,15 @@
       "displayName": "Pipedrive",
       "description": "Manage a Pipedrive CRM — create, update, find, and delete deals, persons, organizations, activities, leads, products, and notes. Runs as an MCP server or as an agentskills.io skill.",
       "category": "sales",
-      "tags": ["pipedrive", "crm", "sales", "deals", "leads", "mcp", "skill"],
+      "tags": [
+        "pipedrive",
+        "crm",
+        "sales",
+        "deals",
+        "leads",
+        "mcp",
+        "skill"
+      ],
       "author": {
         "name": "Zapier",
         "email": "support@zapier.com",
@@ -239,11 +372,42 @@
       }
     },
     {
+      "name": "sdk",
+      "displayName": "Zapier SDK",
+      "description": "TypeScript SDK for building against Zapier — helpers, types, and skills for integration authors. Not an MCP server.",
+      "category": "developer-tools",
+      "tags": [
+        "sdk",
+        "typescript",
+        "zapier",
+        "developer-tools"
+      ],
+      "author": {
+        "name": "Zapier",
+        "email": "support@zapier.com",
+        "url": "https://zapier.com"
+      },
+      "homepage": "https://github.com/zapier/sdk",
+      "repository": "https://github.com/zapier/sdk",
+      "source": {
+        "source": "github",
+        "repo": "zapier/sdk"
+      }
+    },
+    {
       "name": "slack",
       "displayName": "Slack",
       "description": "Agent-callable Slack tools — send and manage messages, read channels and threads, search, manage channels and membership, look up users, and work with canvases and files. Runs as an MCP server or as an agentskills.io skill.",
       "category": "communication",
-      "tags": ["slack", "messaging", "chat", "channels", "canvas", "mcp", "skill"],
+      "tags": [
+        "slack",
+        "messaging",
+        "chat",
+        "channels",
+        "canvas",
+        "mcp",
+        "skill"
+      ],
       "author": {
         "name": "Zapier",
         "email": "support@zapier.com",
@@ -264,7 +428,14 @@
       "displayName": "Telegram",
       "description": "Agent-callable Telegram bot tools — send messages, media, locations, contacts, and polls; edit, delete, forward, copy, and pin messages; resolve chats, members, and files. Runs as an MCP server or as an agentskills.io skill.",
       "category": "communication",
-      "tags": ["telegram", "messaging", "chat", "bot", "mcp", "skill"],
+      "tags": [
+        "telegram",
+        "messaging",
+        "chat",
+        "bot",
+        "mcp",
+        "skill"
+      ],
       "author": {
         "name": "Zapier",
         "email": "support@zapier.com",
@@ -285,7 +456,15 @@
       "displayName": "Trello",
       "description": "Agent-callable Trello tools — create and update cards, manage boards, lists, labels, checklists, and search. Runs as an MCP server or as an agentskills.io skill.",
       "category": "productivity",
-      "tags": ["trello", "boards", "cards", "task-management", "project-management", "mcp", "skill"],
+      "tags": [
+        "trello",
+        "boards",
+        "cards",
+        "task-management",
+        "project-management",
+        "mcp",
+        "skill"
+      ],
       "author": {
         "name": "Zapier",
         "email": "support@zapier.com",
@@ -306,7 +485,15 @@
       "displayName": "YouTube",
       "description": "Agent-callable YouTube tools — search and read videos, update and delete videos, manage playlists and playlist items, read and post comments, rate videos, manage subscriptions, and read channel and caption metadata. Runs as an MCP server or as an agentskills.io skill.",
       "category": "media",
-      "tags": ["youtube", "video", "playlists", "comments", "channels", "mcp", "skill"],
+      "tags": [
+        "youtube",
+        "video",
+        "playlists",
+        "comments",
+        "channels",
+        "mcp",
+        "skill"
+      ],
       "author": {
         "name": "Zapier",
         "email": "support@zapier.com",
@@ -320,60 +507,6 @@
         "url": "https://github.com/zapier/connectors.git",
         "path": "apps/youtube",
         "ref": "main"
-      }
-    },
-    {
-      "name": "gtm-cheat-codes",
-      "displayName": "GTM Cheat Codes",
-      "description": "Go-to-market skills for marketing, sales, and customer-success workflows — a curated set of Zapier-authored recipes agents can dispatch on demand.",
-      "category": "productivity",
-      "tags": ["gtm", "marketing", "sales", "customer-success", "skills", "workflows"],
-      "author": {
-        "name": "Zapier",
-        "email": "support@zapier.com",
-        "url": "https://zapier.com"
-      },
-      "homepage": "https://github.com/zapier/gtm-cheat-codes",
-      "repository": "https://github.com/zapier/gtm-cheat-codes",
-      "source": {
-        "source": "github",
-        "repo": "zapier/gtm-cheat-codes"
-      }
-    },
-    {
-      "name": "agent-skills",
-      "displayName": "Zapier Agent Skills",
-      "description": "Zapier-authored agentskills.io skills — reusable, agent-callable recipes bundled for Claude Code and compatible clients.",
-      "category": "productivity",
-      "tags": ["skills", "agent-skills", "recipes", "zapier"],
-      "author": {
-        "name": "Zapier",
-        "email": "support@zapier.com",
-        "url": "https://zapier.com"
-      },
-      "homepage": "https://github.com/zapier/agent-skills",
-      "repository": "https://github.com/zapier/agent-skills",
-      "source": {
-        "source": "github",
-        "repo": "zapier/agent-skills"
-      }
-    },
-    {
-      "name": "sdk",
-      "displayName": "Zapier SDK",
-      "description": "TypeScript SDK for building against Zapier — helpers, types, and skills for integration authors. Not an MCP server.",
-      "category": "developer-tools",
-      "tags": ["sdk", "typescript", "zapier", "developer-tools"],
-      "author": {
-        "name": "Zapier",
-        "email": "support@zapier.com",
-        "url": "https://zapier.com"
-      },
-      "homepage": "https://github.com/zapier/sdk",
-      "repository": "https://github.com/zapier/sdk",
-      "source": {
-        "source": "github",
-        "repo": "zapier/sdk"
       }
     }
   ]
