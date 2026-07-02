@@ -17,8 +17,13 @@ Zapier's plugin marketplace for coding agents. One command to add, then install 
 **In-session** (slash commands inside an active Claude Code session):
 
 ```
+# Add the marketplace once
 /plugin marketplace add zapier/marketplace
+
+# Install whichever you want
 /plugin install notion@zapier
+/plugin install gtm-cheat-codes@zapier
+/plugin install mcp@zapier
 ```
 
 Browse the full list interactively with `/plugin` → Discover.
@@ -26,8 +31,15 @@ Browse the full list interactively with `/plugin` → Discover.
 **CLI** (from your terminal, without opening a session):
 
 ```
+# Add the marketplace once
 claude plugin marketplace add zapier/marketplace
+
+# Install whichever you want
 claude plugin install notion@zapier
+claude plugin install gtm-cheat-codes@zapier
+claude plugin install mcp@zapier
+
+# See what you've got
 claude plugin list
 ```
 
