@@ -37,9 +37,6 @@ claude plugin list
 # Invoke the Notion plugin
 claude "What do our Notion docs say about onboarding new engineers?"
 
-# Invoke the Zapier MCP (any of the 9,000+ connected apps)
-claude "Send a Slack message to #general saying the deploy is done"
-
 # Invoke a GTM cheat code
 claude "Draft a cold outreach email for our new pricing tier"
 ```
