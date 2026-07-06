@@ -16,9 +16,7 @@ Zapier's plugin marketplace for coding agents. One command to add, then install 
 | `mcp` | MCP server | Hosted Zapier MCP — connect any agent to 9,000+ apps |
 | `microsoft-outlook` | MCP + skill | Outlook mail, calendar, and contacts |
 | `notion` | MCP + skill | Independent Notion connector — search, read, and write pages |
-| `pipedrive` | MCP + skill | Pipedrive CRM — deals, contacts, and activities |
 | `sdk` | SDK | TypeScript helpers for building against Zapier |
-| `slack` | MCP + skill | Slack messages, channels, threads, and canvases |
 | `telegram` | MCP + skill | Telegram bot — messages, media, and chats |
 | `trello` | MCP + skill | Trello boards, lists, and cards |
 | `youtube` | MCP + skill | YouTube videos, playlists, and comments |
