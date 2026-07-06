@@ -343,35 +343,6 @@
       }
     },
     {
-      "name": "pipedrive",
-      "displayName": "Pipedrive",
-      "description": "Manage a Pipedrive CRM — create, update, find, and delete deals, persons, organizations, activities, leads, products, and notes. Runs as an MCP server or as an agentskills.io skill.",
-      "category": "sales",
-      "tags": [
-        "pipedrive",
-        "crm",
-        "sales",
-        "deals",
-        "leads",
-        "mcp",
-        "skill"
-      ],
-      "author": {
-        "name": "Zapier",
-        "email": "support@zapier.com",
-        "url": "https://zapier.com"
-      },
-      "homepage": "https://github.com/zapier/connectors/tree/main/apps/pipedrive",
-      "repository": "https://github.com/zapier/connectors",
-      "license": "Elastic-2.0",
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/zapier/connectors.git",
-        "path": "apps/pipedrive",
-        "ref": "main"
-      }
-    },
-    {
       "name": "sdk",
       "displayName": "Zapier SDK",
       "description": "TypeScript SDK for building against Zapier — helpers, types, and skills for integration authors. Not an MCP server.",
@@ -392,35 +363,6 @@
       "source": {
         "source": "github",
         "repo": "zapier/sdk"
-      }
-    },
-    {
-      "name": "slack",
-      "displayName": "Slack",
-      "description": "Agent-callable Slack tools — send and manage messages, read channels and threads, search, manage channels and membership, look up users, and work with canvases and files. Runs as an MCP server or as an agentskills.io skill.",
-      "category": "communication",
-      "tags": [
-        "slack",
-        "messaging",
-        "chat",
-        "channels",
-        "canvas",
-        "mcp",
-        "skill"
-      ],
-      "author": {
-        "name": "Zapier",
-        "email": "support@zapier.com",
-        "url": "https://zapier.com"
-      },
-      "homepage": "https://github.com/zapier/connectors/tree/main/apps/slack",
-      "repository": "https://github.com/zapier/connectors",
-      "license": "Elastic-2.0",
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/zapier/connectors.git",
-        "path": "apps/slack",
-        "ref": "main"
       }
     },
     {
