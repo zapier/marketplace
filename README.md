@@ -70,7 +70,14 @@ Coming soon.
 
 ### OpenAI Codex
 
-Coming soon.
+```
+codex plugin marketplace add zapier/marketplace
+codex plugin add sdk@zapier
+```
+
+Or open the in-CLI picker with `/plugins` and toggle plugins on.
+
+Only the `sdk` plugin is currently installable via Codex. Other plugins will be added as their home repos ship `.codex-plugin/plugin.json`.
 
 ## Contributing
 
