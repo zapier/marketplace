@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Verify the same plugin entry resolves to the same source target across every manifest."""
+"""Verify a plugin listed in more than one manifest resolves to the same source target."""
 
 from __future__ import annotations
 
@@ -68,26 +68,15 @@ def main() -> int:
         name for plugins in plugins_by_manifest.values() for name in plugins
     }
 
-    # An empty manifest (`plugins: []`) is intentional — a platform we've
-    # scaffolded but not yet populated. Skip it entirely for consistency
-    # purposes. Only manifests that carry at least one plugin participate in
-    # the parity check.
-    populated_manifests = {m for m, plugins in plugins_by_manifest.items() if plugins}
-
     for plugin_name in sorted(plugin_names):
-        # Only fault a plugin as "missing" from a manifest that is itself
-        # populated — otherwise the empty-manifest platforms would flood errors
-        # for every entry until they're filled in.
-        missing = [
-            m
-            for m in populated_manifests
-            if plugin_name not in plugins_by_manifest.get(m, {})
-        ]
-        if missing:
-            errors.append(f"plugin '{plugin_name}' missing from: {', '.join(missing)}")
+        # Only enforce source-target parity across the manifests that actually
+        # list this plugin. A plugin can appear in one manifest but not
+        # others — that's the normal transition state when a home repo has
+        # shipped one platform's per-plugin manifest but not the rest
+        # (see AGENTS.md § "How to add a plugin").
         present_targets = {
             m: plugins_by_manifest[m][plugin_name]
-            for m in populated_manifests
+            for m in plugins_by_manifest
             if plugin_name in plugins_by_manifest.get(m, {})
             and plugins_by_manifest[m][plugin_name] is not None
         }
