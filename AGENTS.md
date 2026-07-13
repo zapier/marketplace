@@ -12,7 +12,7 @@ There are three manifest files, one per platform:
 
 - [`.claude-plugin/marketplace.json`](./.claude-plugin/marketplace.json) — Claude Code (populated)
 - [`.github/plugin/marketplace.json`](./.github/plugin/marketplace.json) — GitHub Copilot CLI (scaffolded, empty)
-- [`.agents/plugins/marketplace.json`](./.agents/plugins/marketplace.json) — OpenAI Codex (scaffolded, empty)
+- [`.agents/plugins/marketplace.json`](./.agents/plugins/marketplace.json) — OpenAI Codex (populated)
 
 For every plugin that appears in more than one manifest, all copies must:
 
@@ -44,7 +44,7 @@ Plugin sources currently pin to `"ref": "main"`. That means every installer pull
 
 For the contributor walkthrough — including the CI checks, review flow, and PR conventions — follow [`CONTRIBUTING.md`](./CONTRIBUTING.md). This section stays short and lists only the invariants those steps must preserve:
 
-1. The home repo must expose the right per-platform manifest at the right path (`.claude-plugin/plugin.json` for Claude Code; Codex / Copilot equivalents when those platforms come online). Empty Codex / Copilot manifests here stay empty until the home repo ships its per-platform manifest.
+1. The home repo must expose the right per-platform manifest at the right path (`.claude-plugin/plugin.json` for Claude Code, `.codex-plugin/plugin.json` for Codex, Copilot equivalent when Copilot comes online). A plugin only gets an entry here for a platform once its home repo publishes that platform's per-plugin manifest.
 2. New entries respect the [naming and ordering rules](#naming-and-ordering) above — kebab-case, no `zapier-` prefix, inserted alphabetically.
 3. Standard optional fields (`displayName`, `description`, `author`, `homepage`, `repository`, `license`, `category`, `tags`) are populated so the marketplace listing renders useful metadata before install.
 4. The same plugin listed in more than one manifest resolves to the same source target — see [manifest invariant](#manifest-invariant-any-plugin-listed-in-two-or-more-platforms-must-resolve-to-the-same-source) above. CI enforces this.

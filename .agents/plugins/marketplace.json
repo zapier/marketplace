@@ -3,5 +3,21 @@
   "interface": {
     "displayName": "Zapier"
   },
-  "plugins": []
+  "plugins": [
+    {
+      "name": "sdk",
+      "displayName": "Zapier SDK",
+      "description": "TypeScript SDK for building against Zapier — helpers, types, and skills for integration authors. Not an MCP server.",
+      "category": "Developer Tools",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/zapier/sdk",
+        "ref": "main"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      }
+    }
+  ]
 }
