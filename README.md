@@ -80,8 +80,6 @@ Or open the in-CLI picker with `/plugins` and toggle plugins on.
 
 `zapier` (Zapier MCP) and `sdk` are currently installable via Codex. Other plugins will be added as their home repos ship `.codex-plugin/plugin.json`.
 
-> The Codex entry is named `zapier` (not `mcp` like the Claude Code entry) because Codex enforces that the marketplace name match the plugin's `plugin.json` `name` field. The plugin.json inside `zapier/zapier-mcp` uses `zapier`, and we didn't want to change it since it's already published to other clients that tolerate the mismatch.
-
 ## Contributing
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md). The three manifest files (Claude Code + Copilot + Codex) live under `.claude-plugin/`, `.github/plugin/`, and `.agents/plugins/` — the schemas that validate each are in [`schemas/`](./schemas/).
