@@ -5,8 +5,54 @@
     "email": "support@zapier.com"
   },
   "metadata": {
-    "description": "Official Zapier plugins for GitHub Copilot CLI — roadmap: not yet populated. Track progress at https://github.com/zapier/marketplace/issues.",
+    "description": "Official Zapier plugins for GitHub Copilot CLI",
     "version": "1.0.0"
   },
-  "plugins": []
+  "plugins": [
+    {
+      "name": "mcp",
+      "description": "Hosted Zapier MCP server — connect any agent to 9,000+ apps.",
+      "author": {
+        "name": "Zapier",
+        "email": "support@zapier.com",
+        "url": "https://zapier.com"
+      },
+      "homepage": "https://github.com/zapier/zapier-mcp",
+      "repository": "https://github.com/zapier/zapier-mcp",
+      "keywords": [
+        "mcp",
+        "zapier",
+        "integrations",
+        "automation"
+      ],
+      "source": {
+        "source": "github",
+        "repo": "zapier/zapier-mcp",
+        "path": "plugins/zapier",
+        "ref": "main"
+      }
+    },
+    {
+      "name": "sdk",
+      "description": "TypeScript SDK for building against Zapier — helpers, types, and skills for integration authors. Not an MCP server.",
+      "author": {
+        "name": "Zapier",
+        "email": "support@zapier.com",
+        "url": "https://zapier.com"
+      },
+      "homepage": "https://github.com/zapier/sdk",
+      "repository": "https://github.com/zapier/sdk",
+      "license": "MIT",
+      "keywords": [
+        "sdk",
+        "typescript",
+        "zapier",
+        "developer-tools"
+      ],
+      "source": {
+        "source": "github",
+        "repo": "zapier/sdk"
+      }
+    }
+  ]
 }
