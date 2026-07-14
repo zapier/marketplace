@@ -11,7 +11,7 @@ This repo is the central pointer manifest that lets agents discover Zapier plugi
 There are three manifest files, one per platform:
 
 - [`.claude-plugin/marketplace.json`](./.claude-plugin/marketplace.json) — Claude Code (populated)
-- [`.github/plugin/marketplace.json`](./.github/plugin/marketplace.json) — GitHub Copilot CLI (scaffolded, empty)
+- [`.github/plugin/marketplace.json`](./.github/plugin/marketplace.json) — GitHub Copilot CLI (populated)
 - [`.agents/plugins/marketplace.json`](./.agents/plugins/marketplace.json) — OpenAI Codex (populated)
 
 For every plugin that appears in more than one manifest, all copies must:

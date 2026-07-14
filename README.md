@@ -66,7 +66,13 @@ claude "Draft a cold outreach email for our new pricing tier"
 
 ### GitHub Copilot CLI
 
-Coming soon.
+```
+copilot plugin marketplace add zapier/marketplace
+copilot plugin install mcp@zapier
+copilot plugin install sdk@zapier
+```
+
+`mcp` (Zapier MCP) and `sdk` are currently installable via Copilot CLI. Other plugins will be added as their home repos ship `.github/plugin/plugin.json`.
 
 ### OpenAI Codex
 
