@@ -5,7 +5,7 @@
   },
   "plugins": [
     {
-      "name": "mcp",
+      "name": "zapier",
       "displayName": "Zapier MCP",
       "description": "Hosted Zapier MCP server — connect any agent to 9,000+ apps.",
       "category": "Productivity",

@@ -72,13 +72,13 @@ Coming soon.
 
 ```
 codex plugin marketplace add zapier/marketplace
-codex plugin add mcp@zapier
+codex plugin add zapier@zapier
 codex plugin add sdk@zapier
 ```
 
 Or open the in-CLI picker with `/plugins` and toggle plugins on.
 
-`mcp` and `sdk` are currently installable via Codex. Other plugins will be added as their home repos ship `.codex-plugin/plugin.json`.
+`zapier` (Zapier MCP) and `sdk` are currently installable via Codex. Other plugins will be added as their home repos ship `.codex-plugin/plugin.json`.
 
 ## Contributing
 
