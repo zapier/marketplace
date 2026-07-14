@@ -5,6 +5,22 @@
   },
   "plugins": [
     {
+      "name": "mcp",
+      "displayName": "Zapier MCP",
+      "description": "Hosted Zapier MCP server — connect any agent to 9,000+ apps.",
+      "category": "Productivity",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/zapier/zapier-mcp",
+        "path": "plugins/zapier",
+        "ref": "main"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      }
+    },
+    {
       "name": "sdk",
       "displayName": "Zapier SDK",
       "description": "TypeScript SDK for building against Zapier — helpers, types, and skills for integration authors. Not an MCP server.",
