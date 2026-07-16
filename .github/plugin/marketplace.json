@@ -53,6 +53,34 @@
         "source": "github",
         "repo": "zapier/sdk"
       }
+    },
+    {
+      "name": "notion-test",
+      "description": "TEMPORARY test-only entry validating the Codex/Copilot skills-path fix on zapier/connectors#fix/notion-codex-plugin-skills. Not the production notion listing — remove once that fix merges to main.",
+      "author": {
+        "name": "Zapier",
+        "email": "support@zapier.com",
+        "url": "https://zapier.com"
+      },
+      "homepage": "https://github.com/zapier/connectors/tree/main/apps/notion",
+      "repository": "https://github.com/zapier/connectors",
+      "license": "Elastic-2.0",
+      "keywords": [
+        "notion",
+        "productivity",
+        "database",
+        "docs",
+        "wiki",
+        "pages",
+        "mcp",
+        "skill"
+      ],
+      "source": {
+        "source": "github",
+        "repo": "zapier/connectors",
+        "path": "apps/notion",
+        "ref": "fix/notion-codex-plugin-skills"
+      }
     }
   ]
 }

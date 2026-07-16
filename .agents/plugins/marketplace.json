@@ -34,6 +34,22 @@
         "installation": "AVAILABLE",
         "authentication": "ON_INSTALL"
       }
+    },
+    {
+      "name": "notion-test",
+      "displayName": "Notion (test)",
+      "description": "TEMPORARY test-only entry validating the Codex skills-path fix on zapier/connectors#fix/notion-codex-plugin-skills. Not the production notion listing — remove once that fix merges to main.",
+      "category": "Productivity",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/zapier/connectors",
+        "path": "apps/notion",
+        "ref": "fix/notion-codex-plugin-skills"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      }
     }
   ]
 }
