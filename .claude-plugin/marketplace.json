@@ -339,7 +339,7 @@
         "source": "git-subdir",
         "url": "https://github.com/zapier/connectors.git",
         "path": "apps/notion",
-        "ref": "main"
+        "ref": "fix/notion-codex-plugin-skills"
       }
     },
     {

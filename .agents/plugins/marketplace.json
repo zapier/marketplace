@@ -36,9 +36,9 @@
       }
     },
     {
-      "name": "notion-test",
-      "displayName": "Notion (test)",
-      "description": "TEMPORARY test-only entry validating the Codex skills-path fix on zapier/connectors#fix/notion-codex-plugin-skills. Not the production notion listing — remove once that fix merges to main.",
+      "name": "notion",
+      "displayName": "Notion",
+      "description": "Agent-callable Notion tools for searching pages and databases, reading and creating pages, querying data sources, appending content, and managing schemas.",
       "category": "Productivity",
       "source": {
         "source": "git-subdir",
