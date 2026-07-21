@@ -19,6 +19,7 @@ Zapier's plugin marketplace for coding agents. One command to add, then install 
 | `sdk` | SDK | TypeScript helpers for building against Zapier |
 | `telegram` | MCP + skill | Telegram bot — messages, media, and chats |
 | `trello` | MCP + skill | Trello boards, lists, and cards |
+| `wade-skills` | Skills | Wade Foster's (Zapier CEO) day-to-day agent skills |
 | `youtube` | MCP + skill | YouTube videos, playlists, and comments |
 
 ## Install
@@ -70,9 +71,10 @@ claude "Draft a cold outreach email for our new pricing tier"
 copilot plugin marketplace add zapier/marketplace
 copilot plugin install mcp@zapier
 copilot plugin install sdk@zapier
+copilot plugin install wade-skills@zapier
 ```
 
-`mcp` (Zapier MCP) and `sdk` are currently installable via Copilot CLI. Other plugins will be added as their home repos ship `.github/plugin/plugin.json`.
+`mcp` (Zapier MCP), `sdk`, and `wade-skills` are currently installable via Copilot CLI. Other plugins will be added as their home repos ship `.github/plugin/plugin.json`.
 
 ### OpenAI Codex
 
@@ -80,11 +82,12 @@ copilot plugin install sdk@zapier
 codex plugin marketplace add zapier/marketplace
 codex plugin add zapier@zapier
 codex plugin add sdk@zapier
+codex plugin add wade-skills@zapier
 ```
 
 Or open the in-CLI picker with `/plugins` and toggle plugins on.
 
-`zapier` (Zapier MCP) and `sdk` are currently installable via Codex. Other plugins will be added as their home repos ship `.codex-plugin/plugin.json`.
+`zapier` (Zapier MCP), `sdk`, and `wade-skills` are currently installable via Codex. Other plugins will be added as their home repos ship `.codex-plugin/plugin.json`.
 
 ## Contributing
 

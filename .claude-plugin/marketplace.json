@@ -423,6 +423,31 @@
       }
     },
     {
+      "name": "wade-skills",
+      "displayName": "Zapier CEO Copilot",
+      "description": "Agent skills Wade Foster (Co-Founder & CEO, Zapier) uses day-to-day — War Council, Meeting Follow-Up Pipeline, and Exec Weekly Agenda Generator.",
+      "category": "productivity",
+      "tags": [
+        "skills",
+        "ai-agents",
+        "automation",
+        "prompt-engineering",
+        "productivity"
+      ],
+      "author": {
+        "name": "Zapier",
+        "email": "support@zapier.com",
+        "url": "https://zapier.com"
+      },
+      "homepage": "https://github.com/zapier/wade-skills",
+      "repository": "https://github.com/zapier/wade-skills",
+      "license": "MIT",
+      "source": {
+        "source": "github",
+        "repo": "zapier/wade-skills"
+      }
+    },
+    {
       "name": "youtube",
       "displayName": "YouTube",
       "description": "Agent-callable YouTube tools — search and read videos, update and delete videos, manage playlists and playlist items, read and post comments, rate videos, manage subscriptions, and read channel and caption metadata. Runs as an MCP server or as an agentskills.io skill.",
