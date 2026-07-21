@@ -53,6 +53,29 @@
         "source": "github",
         "repo": "zapier/sdk"
       }
+    },
+    {
+      "name": "wade-skills",
+      "description": "Agent skills Wade Foster (Co-Founder & CEO, Zapier) uses day-to-day — War Council, Meeting Follow-Up Pipeline, and Exec Weekly Agenda Generator.",
+      "author": {
+        "name": "Zapier",
+        "email": "support@zapier.com",
+        "url": "https://zapier.com"
+      },
+      "homepage": "https://github.com/zapier/wade-skills",
+      "repository": "https://github.com/zapier/wade-skills",
+      "license": "MIT",
+      "keywords": [
+        "skills",
+        "ai-agents",
+        "automation",
+        "prompt-engineering",
+        "productivity"
+      ],
+      "source": {
+        "source": "github",
+        "repo": "zapier/wade-skills"
+      }
     }
   ]
 }
