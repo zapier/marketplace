@@ -205,6 +205,36 @@
       }
     },
     {
+      "name": "google-sheets-plg",
+      "displayName": "Google Sheets (plugin pilot)",
+      "description": "Pilot of the nested plugins/ connector layout for Google Sheets — read and write spreadsheet data as rows or raw cells, manage worksheets and columns, and apply formatting, sorting, and validation. Runs as an MCP server or as an agentskills.io skill.",
+      "category": "productivity",
+      "tags": [
+        "google-sheets",
+        "spreadsheets",
+        "sheets",
+        "data",
+        "google-workspace",
+        "mcp",
+        "skill",
+        "pilot"
+      ],
+      "author": {
+        "name": "Zapier",
+        "email": "support@zapier.com",
+        "url": "https://zapier.com"
+      },
+      "homepage": "https://github.com/zapier/connectors/tree/main/plugins/google-sheets-plg",
+      "repository": "https://github.com/zapier/connectors",
+      "license": "Elastic-2.0",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/zapier/connectors.git",
+        "path": "plugins/google-sheets-plg",
+        "ref": "main"
+      }
+    },
+    {
       "name": "google-tasks",
       "displayName": "Google Tasks",
       "description": "Agent-callable Google Tasks tools — create, list, update, complete, move, and delete tasks and task lists. Runs as an MCP server or as an agentskills.io skill.",
