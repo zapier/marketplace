@@ -5,6 +5,22 @@
   },
   "plugins": [
     {
+      "name": "google-sheets-plg",
+      "displayName": "Google Sheets (plugin pilot)",
+      "description": "Pilot of the nested plugins/ connector layout for Google Sheets — read and write spreadsheet data as rows or raw cells, manage worksheets and columns, and apply formatting, sorting, and validation. Runs as an MCP server or as an agentskills.io skill.",
+      "category": "Productivity",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/zapier/connectors.git",
+        "path": "plugins/google-sheets-plg",
+        "ref": "main"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      }
+    },
+    {
       "name": "zapier",
       "displayName": "Zapier MCP",
       "description": "Hosted Zapier MCP server — connect any agent to 9,000+ apps.",
