@@ -5,17 +5,29 @@ Zapier's plugin marketplace for coding agents. One command to add, then install 
 | Plugin | Type | What it does |
 | --- | --- | --- |
 | `agent-skills` | Skills | Zapier-authored agentskills.io skills for compatible clients |
+| `algolia` | MCP + skill | Algolia search — index, search, and tune records and settings |
+| `alpaca` | MCP + skill | Alpaca brokerage — trade stocks, crypto, and options |
+| `clay` | MCP + skill | Clay tables — create, update, and find rows |
+| `dataforseo` | MCP + skill | SEO and AI-search data — SERPs, keywords, and backlinks |
+| `discord` | MCP + skill | Discord messages, threads, channels, and roles |
 | `dropbox` | MCP + skill | Dropbox files and folders — upload, share, search, and organize |
+| `elevenlabs` | MCP + skill | AI audio — text to speech, transcription, and voice design |
 | `google-ads` | MCP + skill | Google Ads campaigns, budgets, and reporting |
+| `google-analytics` | MCP + skill | GA4 reports, properties, and events |
 | `google-calendar` | MCP + skill | Events, calendars, and free/busy availability |
 | `google-contacts` | MCP + skill | Contacts and contact groups (labels) |
 | `google-docs` | MCP + skill | Create, read, and edit Google Docs |
 | `google-sheets` | MCP + skill | Read and write Google Sheets data, formatting, and structure |
 | `google-tasks` | MCP + skill | Task lists and to-dos in Google Tasks |
 | `gtm-cheat-codes` | Skills | Marketing / sales / CS workflow recipes |
+| `heygen` | MCP + skill | AI avatar videos, translation, and voice cloning |
 | `mcp` | MCP server | Hosted Zapier MCP — connect any agent to 9,000+ apps |
 | `microsoft-outlook` | MCP + skill | Outlook mail, calendar, and contacts |
+| `microsoft-sharepoint` | MCP + skill | SharePoint sites, files, lists, and pages |
+| `microsoft-todo` | MCP + skill | Tasks and task lists in Microsoft To Do |
 | `notion` | MCP + skill | Independent Notion connector — search, read, and write pages |
+| `resend` | MCP + skill | Transactional email, broadcasts, and contacts |
+| `runway` | MCP + skill | Generate and edit AI images, video, and audio |
 | `sdk` | SDK | TypeScript helpers for building against Zapier |
 | `telegram` | MCP + skill | Telegram bot — messages, media, and chats |
 | `trello` | MCP + skill | Trello boards, lists, and cards |

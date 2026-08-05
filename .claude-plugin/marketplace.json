@@ -32,6 +32,151 @@
       }
     },
     {
+      "name": "algolia",
+      "displayName": "Algolia",
+      "description": "Agent-callable Algolia tools — index records, search and browse them, manage index settings, synonyms, and query rules, and read AI recommendations. Runs as an MCP server or as an agentskills.io skill.",
+      "category": "developer-tools",
+      "tags": [
+        "algolia",
+        "search",
+        "indexing",
+        "recommendations",
+        "mcp",
+        "skill"
+      ],
+      "author": {
+        "name": "Zapier",
+        "email": "support@zapier.com",
+        "url": "https://zapier.com"
+      },
+      "homepage": "https://github.com/zapier/connectors/tree/main/apps/algolia",
+      "repository": "https://github.com/zapier/connectors",
+      "license": "Elastic-2.0",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/zapier/connectors.git",
+        "path": "apps/algolia",
+        "ref": "main"
+      }
+    },
+    {
+      "name": "alpaca",
+      "displayName": "Alpaca",
+      "description": "Agent-callable Alpaca trading tools — place and manage stock, crypto, and options orders, read account balances, positions, and portfolio history, look up assets and market hours, and read watchlists. Runs as an MCP server or as an agentskills.io skill.",
+      "category": "finance",
+      "tags": [
+        "alpaca",
+        "trading",
+        "stocks",
+        "crypto",
+        "options",
+        "brokerage",
+        "mcp",
+        "skill"
+      ],
+      "author": {
+        "name": "Zapier",
+        "email": "support@zapier.com",
+        "url": "https://zapier.com"
+      },
+      "homepage": "https://github.com/zapier/connectors/tree/main/apps/alpaca",
+      "repository": "https://github.com/zapier/connectors",
+      "license": "Elastic-2.0",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/zapier/connectors.git",
+        "path": "apps/alpaca",
+        "ref": "main"
+      }
+    },
+    {
+      "name": "clay",
+      "displayName": "Clay",
+      "description": "Agent-callable Clay tools — create, update, and find rows in Clay tables, and navigate workspaces, tables, views, and users. Runs as an MCP server or as an agentskills.io skill.",
+      "category": "sales",
+      "tags": [
+        "clay",
+        "data-enrichment",
+        "gtm",
+        "tables",
+        "mcp",
+        "skill"
+      ],
+      "author": {
+        "name": "Zapier",
+        "email": "support@zapier.com",
+        "url": "https://zapier.com"
+      },
+      "homepage": "https://github.com/zapier/connectors/tree/main/apps/clay",
+      "repository": "https://github.com/zapier/connectors",
+      "license": "Elastic-2.0",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/zapier/connectors.git",
+        "path": "apps/clay",
+        "ref": "main"
+      }
+    },
+    {
+      "name": "dataforseo",
+      "displayName": "DataForSEO",
+      "description": "Agent-callable DataForSEO tools — Google SERP results, keyword and domain analytics, backlinks, Google Maps business data, on-page audits, and AI-search visibility (LLM answers + brand mentions). Runs as an MCP server or as an agentskills.io skill.",
+      "category": "marketing",
+      "tags": [
+        "dataforseo",
+        "seo",
+        "serp",
+        "keywords",
+        "backlinks",
+        "ai-search",
+        "mcp",
+        "skill"
+      ],
+      "author": {
+        "name": "Zapier",
+        "email": "support@zapier.com",
+        "url": "https://zapier.com"
+      },
+      "homepage": "https://github.com/zapier/connectors/tree/main/apps/dataforseo",
+      "repository": "https://github.com/zapier/connectors",
+      "license": "Elastic-2.0",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/zapier/connectors.git",
+        "path": "apps/dataforseo",
+        "ref": "main"
+      }
+    },
+    {
+      "name": "discord",
+      "displayName": "Discord",
+      "description": "Agent-callable Discord tools — send and manage messages, start threads and forum posts, manage channels, members, and roles, and post via webhooks. Runs as an MCP server or as an agentskills.io skill.",
+      "category": "communication",
+      "tags": [
+        "discord",
+        "messaging",
+        "chat",
+        "community",
+        "channels",
+        "mcp",
+        "skill"
+      ],
+      "author": {
+        "name": "Zapier",
+        "email": "support@zapier.com",
+        "url": "https://zapier.com"
+      },
+      "homepage": "https://github.com/zapier/connectors/tree/main/apps/discord",
+      "repository": "https://github.com/zapier/connectors",
+      "license": "Elastic-2.0",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/zapier/connectors.git",
+        "path": "apps/discord",
+        "ref": "main"
+      }
+    },
+    {
       "name": "dropbox",
       "displayName": "Dropbox",
       "description": "Agent-callable Dropbox tools — upload, organize, find, and share files and folders. Runs as an MCP server or as an agentskills.io skill.",
@@ -56,6 +201,36 @@
         "source": "git-subdir",
         "url": "https://github.com/zapier/connectors.git",
         "path": "apps/dropbox",
+        "ref": "main"
+      }
+    },
+    {
+      "name": "elevenlabs",
+      "displayName": "ElevenLabs",
+      "description": "Agent-callable ElevenLabs tools — generate spoken audio from text, create sound effects and multi-speaker dialogue, re-voice and clean up audio, transcribe audio and video, design synthetic voices, and manage voices, history, and quota. Runs as an MCP server or as an agentskills.io skill.",
+      "category": "media",
+      "tags": [
+        "elevenlabs",
+        "text-to-speech",
+        "speech-to-text",
+        "voice",
+        "audio",
+        "sound-effects",
+        "mcp",
+        "skill"
+      ],
+      "author": {
+        "name": "Zapier",
+        "email": "support@zapier.com",
+        "url": "https://zapier.com"
+      },
+      "homepage": "https://github.com/zapier/connectors/tree/main/apps/elevenlabs",
+      "repository": "https://github.com/zapier/connectors",
+      "license": "Elastic-2.0",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/zapier/connectors.git",
+        "path": "apps/elevenlabs",
         "ref": "main"
       }
     },
@@ -85,6 +260,35 @@
         "source": "git-subdir",
         "url": "https://github.com/zapier/connectors.git",
         "path": "apps/google-ads",
+        "ref": "main"
+      }
+    },
+    {
+      "name": "google-analytics",
+      "displayName": "Google Analytics",
+      "description": "Agent-callable Google Analytics 4 (GA4) tools — run analytics reports, discover the dimensions and metrics a property supports, navigate accounts and properties, manage key events and custom dimensions/metrics, and send Measurement Protocol events. Runs as an MCP server or as an agentskills.io skill.",
+      "category": "analytics",
+      "tags": [
+        "google-analytics",
+        "ga4",
+        "analytics",
+        "reporting",
+        "web-traffic",
+        "mcp",
+        "skill"
+      ],
+      "author": {
+        "name": "Zapier",
+        "email": "support@zapier.com",
+        "url": "https://zapier.com"
+      },
+      "homepage": "https://github.com/zapier/connectors/tree/main/apps/google-analytics",
+      "repository": "https://github.com/zapier/connectors",
+      "license": "Elastic-2.0",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/zapier/connectors.git",
+        "path": "apps/google-analytics",
         "ref": "main"
       }
     },
@@ -288,6 +492,35 @@
       }
     },
     {
+      "name": "heygen",
+      "displayName": "HeyGen",
+      "description": "Agent-callable HeyGen tools — generate AI avatar videos, translate and lip-sync videos, synthesize speech, and clone or browse voices and avatars. Runs as an MCP server or as an agentskills.io skill.",
+      "category": "media",
+      "tags": [
+        "heygen",
+        "video",
+        "avatars",
+        "voice",
+        "translation",
+        "mcp",
+        "skill"
+      ],
+      "author": {
+        "name": "Zapier",
+        "email": "support@zapier.com",
+        "url": "https://zapier.com"
+      },
+      "homepage": "https://github.com/zapier/connectors/tree/main/apps/heygen",
+      "repository": "https://github.com/zapier/connectors",
+      "license": "Elastic-2.0",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/zapier/connectors.git",
+        "path": "apps/heygen",
+        "ref": "main"
+      }
+    },
+    {
       "name": "mcp",
       "displayName": "Zapier MCP",
       "description": "Hosted Zapier MCP server — connect any agent to 9,000+ apps.",
@@ -343,6 +576,65 @@
       }
     },
     {
+      "name": "microsoft-sharepoint",
+      "displayName": "Microsoft SharePoint",
+      "description": "Agent-callable Microsoft SharePoint tools — find sites and document libraries, browse, search, upload, move and share files, manage lists and list items, and author site pages. Runs as an MCP server or as an agentskills.io skill.",
+      "category": "productivity",
+      "tags": [
+        "microsoft-sharepoint",
+        "sharepoint",
+        "documents",
+        "files",
+        "lists",
+        "microsoft-365",
+        "mcp",
+        "skill"
+      ],
+      "author": {
+        "name": "Zapier",
+        "email": "support@zapier.com",
+        "url": "https://zapier.com"
+      },
+      "homepage": "https://github.com/zapier/connectors/tree/main/apps/microsoft-sharepoint",
+      "repository": "https://github.com/zapier/connectors",
+      "license": "Elastic-2.0",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/zapier/connectors.git",
+        "path": "apps/microsoft-sharepoint",
+        "ref": "main"
+      }
+    },
+    {
+      "name": "microsoft-todo",
+      "displayName": "Microsoft To Do",
+      "description": "Agent-callable Microsoft To Do tools — create, find, complete, and organize tasks and task lists, plus break tasks into checklist steps. Runs as an MCP server or as an agentskills.io skill.",
+      "category": "productivity",
+      "tags": [
+        "microsoft-todo",
+        "tasks",
+        "todo",
+        "task-management",
+        "microsoft-365",
+        "mcp",
+        "skill"
+      ],
+      "author": {
+        "name": "Zapier",
+        "email": "support@zapier.com",
+        "url": "https://zapier.com"
+      },
+      "homepage": "https://github.com/zapier/connectors/tree/main/apps/microsoft-todo",
+      "repository": "https://github.com/zapier/connectors",
+      "license": "Elastic-2.0",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/zapier/connectors.git",
+        "path": "apps/microsoft-todo",
+        "ref": "main"
+      }
+    },
+    {
       "name": "notion",
       "displayName": "Notion",
       "description": "Agent-callable Notion tools for searching pages and databases, reading and creating pages, querying data sources, appending content, and managing schemas. Runs as an MCP server or as an agentskills.io skill.",
@@ -369,6 +661,64 @@
         "source": "git-subdir",
         "url": "https://github.com/zapier/connectors.git",
         "path": "apps/notion",
+        "ref": "main"
+      }
+    },
+    {
+      "name": "resend",
+      "displayName": "Resend",
+      "description": "Agent-callable Resend tools — send transactional email, manage contacts and segments, send broadcasts, read delivery status, and diagnose sending domains. Runs as an MCP server or as an agentskills.io skill.",
+      "category": "communication",
+      "tags": [
+        "resend",
+        "email",
+        "transactional-email",
+        "broadcasts",
+        "contacts",
+        "mcp",
+        "skill"
+      ],
+      "author": {
+        "name": "Zapier",
+        "email": "support@zapier.com",
+        "url": "https://zapier.com"
+      },
+      "homepage": "https://github.com/zapier/connectors/tree/main/apps/resend",
+      "repository": "https://github.com/zapier/connectors",
+      "license": "Elastic-2.0",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/zapier/connectors.git",
+        "path": "apps/resend",
+        "ref": "main"
+      }
+    },
+    {
+      "name": "runway",
+      "displayName": "Runway",
+      "description": "Agent-callable Runway tools — generate images and video from text or images, edit and upscale media, animate characters, generate speech and sound effects, and run marketing recipes, plus track generation jobs. Runs as an MCP server or as an agentskills.io skill.",
+      "category": "media",
+      "tags": [
+        "runway",
+        "video",
+        "images",
+        "generative-media",
+        "upscaling",
+        "mcp",
+        "skill"
+      ],
+      "author": {
+        "name": "Zapier",
+        "email": "support@zapier.com",
+        "url": "https://zapier.com"
+      },
+      "homepage": "https://github.com/zapier/connectors/tree/main/apps/runway",
+      "repository": "https://github.com/zapier/connectors",
+      "license": "Elastic-2.0",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/zapier/connectors.git",
+        "path": "apps/runway",
         "ref": "main"
       }
     },
