@@ -77,6 +77,8 @@ claude "What do our Notion docs say about onboarding new engineers?"
 claude "Draft a cold outreach email for our new pricing tier"
 ```
 
+**Docs:** [Discover and install plugins](https://code.claude.com/docs/en/discover-plugins.md) · [Plugin marketplaces](https://code.claude.com/docs/en/plugin-marketplaces.md)
+
 ### GitHub Copilot CLI
 
 ```
@@ -87,6 +89,8 @@ copilot plugin install wade-skills@zapier
 ```
 
 `mcp` (Zapier MCP), `sdk`, and `wade-skills` are currently installable via Copilot CLI. Other plugins will be added as their home repos ship `.github/plugin/plugin.json`.
+
+**Docs:** [Finding and installing plugins](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/plugins-finding-installing)
 
 ### OpenAI Codex
 
@@ -100,6 +104,8 @@ codex plugin add wade-skills@zapier
 Or open the in-CLI picker with `/plugins` and toggle plugins on.
 
 `zapier` (Zapier MCP), `sdk`, and `wade-skills` are currently installable via Codex. Other plugins will be added as their home repos ship `.codex-plugin/plugin.json`.
+
+**Docs:** [Building plugins](https://developers.openai.com/codex/plugins/build) · [CLI slash commands](https://developers.openai.com/codex/cli/slash-commands)
 
 ## Contributing
 
