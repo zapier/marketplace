@@ -5,6 +5,7 @@ Zapier's plugin marketplace for coding agents. One command to add, then install 
 | Plugin | Type | What it does |
 | --- | --- | --- |
 | `agent-skills` | Skills | Zapier-authored agentskills.io skills for compatible clients |
+| `aidelly` | MCP + skill | Social content operations — create, schedule, and manage brand content across social channels |
 | `algolia` | MCP + skill | Algolia search — index, search, and tune records and settings |
 | `alpaca` | MCP + skill | Alpaca brokerage — trade stocks, crypto, and options |
 | `clay` | MCP + skill | Clay tables — create, update, and find rows |

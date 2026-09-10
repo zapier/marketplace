@@ -32,6 +32,25 @@
       }
     },
     {
+      "name": "aidelly",
+      "displayName": "Aidelly Social",
+      "description": "Social content operations for AI agents — create, schedule, and manage brand content across social channels through Aidelly's hosted MCP server.",
+      "category": "marketing",
+      "tags": ["social-media", "content", "marketing", "mcp", "automation"],
+      "author": {
+        "name": "Aidelly",
+        "email": "support@aidelly.ai",
+        "url": "https://aidelly.ai"
+      },
+      "homepage": "https://aidelly.ai",
+      "repository": "https://github.com/Aidelly/claude-plugin",
+      "license": "MIT",
+      "source": {
+        "source": "github",
+        "repo": "Aidelly/claude-plugin"
+      }
+    },
+    {
       "name": "algolia",
       "displayName": "Algolia",
       "description": "Agent-callable Algolia tools — index records, search and browse them, manage index settings, synonyms, and query rules, and read AI recommendations. Runs as an MCP server or as an agentskills.io skill.",
