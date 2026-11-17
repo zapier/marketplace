@@ -27,8 +27,8 @@ When adding a plugin to a populated platform that isn't yet supported by the oth
 
 ## Naming and ordering
 
-- Plugin names are short, lowercase, kebab-case product names: `notion`, `slack`, `mcp`, `agent-skills`, `gtm-cheat-codes`, `sdk`
-- **Do not prefix with `zapier-`.** The `@zapier` marketplace suffix at install time (`/plugin install notion@zapier`) already provides provenance and namespacing — a `zapier-notion@zapier` install would be redundant and reads as Zapier-branded rather than an open connector for the vendor.
+- Plugin names are short, lowercase, kebab-case product names: `mcp`, `agent-skills`, `gtm-cheat-codes`, `sdk`
+- **Do not prefix with `zapier-`.** The `@zapier` marketplace suffix at install time (`/plugin install sdk@zapier`) already provides provenance and namespacing — a `zapier-sdk@zapier` install would be redundant and reads as Zapier-branded rather than an open connector for the vendor.
 - Renaming a plugin is a breaking change for every user who has it installed — use the marketplace `renames` field (Claude Code v2.1.193+) to migrate existing installs when a rename is unavoidable.
 - **Keep the plugin list sorted alphabetically by `name`.** Applies to every manifest (`.claude-plugin/marketplace.json`, `.github/plugin/marketplace.json`, `.agents/plugins/marketplace.json`) and to the plugins table in [`README.md`](./README.md). Insert new entries in place; do not append.
 
