@@ -5,34 +5,10 @@ Zapier's plugin marketplace for coding agents. One command to add, then install 
 | Plugin | Type | What it does |
 | --- | --- | --- |
 | `agent-skills` | Skills | Zapier-authored agentskills.io skills for compatible clients |
-| `algolia` | MCP + skill | Algolia search — index, search, and tune records and settings |
-| `alpaca` | MCP + skill | Alpaca brokerage — trade stocks, crypto, and options |
-| `clay` | MCP + skill | Clay tables — create, update, and find rows |
-| `dataforseo` | MCP + skill | SEO and AI-search data — SERPs, keywords, and backlinks |
-| `discord` | MCP + skill | Discord messages, threads, channels, and roles |
-| `dropbox` | MCP + skill | Dropbox files and folders — upload, share, search, and organize |
-| `elevenlabs` | MCP + skill | AI audio — text to speech, transcription, and voice design |
-| `google-ads` | MCP + skill | Google Ads campaigns, budgets, and reporting |
-| `google-analytics` | MCP + skill | GA4 reports, properties, and events |
-| `google-calendar` | MCP + skill | Events, calendars, and free/busy availability |
-| `google-contacts` | MCP + skill | Contacts and contact groups (labels) |
-| `google-docs` | MCP + skill | Create, read, and edit Google Docs |
-| `google-sheets` | MCP + skill | Read and write Google Sheets data, formatting, and structure |
-| `google-tasks` | MCP + skill | Task lists and to-dos in Google Tasks |
 | `gtm-cheat-codes` | Skills | Marketing / sales / CS workflow recipes |
-| `heygen` | MCP + skill | AI avatar videos, translation, and voice cloning |
 | `mcp` | MCP server | Hosted Zapier MCP — connect any agent to 9,000+ apps |
-| `microsoft-outlook` | MCP + skill | Outlook mail, calendar, and contacts |
-| `microsoft-sharepoint` | MCP + skill | SharePoint sites, files, lists, and pages |
-| `microsoft-todo` | MCP + skill | Tasks and task lists in Microsoft To Do |
-| `notion` | MCP + skill | Independent Notion connector — search, read, and write pages |
-| `resend` | MCP + skill | Transactional email, broadcasts, and contacts |
-| `runway` | MCP + skill | Generate and edit AI images, video, and audio |
 | `sdk` | SDK | TypeScript helpers for building against Zapier |
-| `telegram` | MCP + skill | Telegram bot — messages, media, and chats |
-| `trello` | MCP + skill | Trello boards, lists, and cards |
 | `wade-skills` | Skills | Wade Foster's (Zapier CEO) day-to-day agent skills |
-| `youtube` | MCP + skill | YouTube videos, playlists, and comments |
 
 ## Install
 
@@ -45,7 +21,7 @@ Zapier's plugin marketplace for coding agents. One command to add, then install 
 claude plugin marketplace add zapier/marketplace
 
 # Install whichever you want
-claude plugin install notion@zapier
+claude plugin install sdk@zapier
 claude plugin install gtm-cheat-codes@zapier
 claude plugin install mcp@zapier
 
@@ -60,7 +36,7 @@ claude plugin list
 /plugin marketplace add zapier/marketplace
 
 # Install whichever you want
-/plugin install notion@zapier
+/plugin install sdk@zapier
 /plugin install gtm-cheat-codes@zapier
 /plugin install mcp@zapier
 ```
@@ -70,9 +46,6 @@ Browse the full list interactively with `/plugin` → Discover.
 **Try it out** — once a plugin is installed, ask Claude:
 
 ```
-# Invoke the Notion plugin
-claude "What do our Notion docs say about onboarding new engineers?"
-
 # Invoke a GTM cheat code
 claude "Draft a cold outreach email for our new pricing tier"
 ```

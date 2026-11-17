@@ -2,7 +2,7 @@
 
 > The central pointer manifest that lets agents discover and install Zapier plugins across Claude Code, GitHub Copilot CLI, and OpenAI Codex. Plugins themselves live in their home repos; this repo maintains three platform-specific `marketplace.json` files that keep the same plugin set in sync across every supported agent platform.
 
-The repo is small and read-mostly. The four currently listed plugins are `mcp` (the Zapier MCP server), `zapier-notion` (a Notion connector), `gtm-cheat-codes` (go-to-market skills), and `agent-skills` (Zapier-authored Claude Code skills).
+The repo is small and read-mostly. The currently listed plugins are `mcp` (the Zapier MCP server), `sdk` (the Zapier SDK), `gtm-cheat-codes` (go-to-market skills), `wade-skills` (Wade Foster's agent skills), and `agent-skills` (Zapier-authored Claude Code skills).
 
 ## Docs
 
@@ -19,7 +19,6 @@ The repo is small and read-mostly. The four currently listed plugins are `mcp` (
 ## Plugin home repos
 
 - [zapier/zapier-mcp](https://github.com/zapier/zapier-mcp): Hosted Zapier MCP server — the `mcp` plugin
-- [zapier/connectors](https://github.com/zapier/connectors): App connectors — `zapier-notion` lives at `apps/notion`
 - [zapier/gtm-cheat-codes](https://github.com/zapier/gtm-cheat-codes): Go-to-market skills for marketing, sales, and CS
 - [zapier/agent-skills](https://github.com/zapier/agent-skills): Zapier-authored Claude Code skills
 
